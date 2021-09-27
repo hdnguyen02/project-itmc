@@ -8,7 +8,7 @@
             <span class="errorMess"></span>
             <input ref="inputpassword" v-model="login.password" class="input-login" type="password" placeholder="Enter password">
             <span class="errorMess"></span>
-            <a @click.prevent="funclogin()" class="submit-btn" >login</a>
+            <a @click.prevent="functionlogin()" class="submit-btn" >login</a>
             <div class="login-diff">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-google"></a>
@@ -33,9 +33,8 @@ export default {
         }
     },
     methods:{
-        funclogin:function () {
-      
-        }
+
+ 
     }
     
 }
