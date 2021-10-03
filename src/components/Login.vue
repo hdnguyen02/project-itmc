@@ -2,19 +2,16 @@
     <div id="container">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <form class="form-group"> 
-            <img class="avatar" src="../../assets/image/avatar.png" alt="">
             <h3 class="title">WELLCOME</h3>
-            <input ref="inputmail" v-model="login.mail" class="input-login" type="text" placeholder="Enter email">
+            <input   class="input-login" type="text" placeholder="Enter email">
             <span class="errorMess"></span>
-            <input ref="inputpassword" v-model="login.password" class="input-login" type="password" placeholder="Enter password">
+            <input class="input-login" type="password" placeholder="Enter password">
             <span class="errorMess"></span>
-            <a @click.prevent="functionlogin()" class="submit-btn" >login</a>
+            <a class="submit-btn">login</a>
             <div class="login-diff">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-google"></a>
             <a href="#" class="fa fa-skype"></a>
-            </div>
-              <div>
         </div>
         </form>
       
@@ -26,14 +23,12 @@ export default {
 
     data () {
         return {
-            login:{
-                mail:"",
-                password:""
-            }, 
+            
         }
     },
     methods:{
-       
+        
+    
  
     }
     
@@ -42,42 +37,37 @@ export default {
 
 <style scoped>
 
-
-
 .errorMess {
     display: none;
 }
 
 
 #container {
-    background-color: rgba(93, 143, 201,0.7);
-    background: url(../../assets/image/avatar.png);
     width: auto;
     height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-image: url(../assets/loginbackgroup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .form-group {
     position: relative;
     width: 500px;
     height: 400px;
-    background-color: white;
+    background-color: rgba(256, 256, 256, 1);
     border-radius: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
-
 }
 
 .form-group .title {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 .avatar {
