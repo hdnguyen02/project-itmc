@@ -33,7 +33,7 @@ export default {
         }
     },
     methods:{
-
+       
  
     }
     
@@ -42,11 +42,7 @@ export default {
 
 <style scoped>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-}
+
 
 .errorMess {
     display: none;
@@ -54,13 +50,13 @@ export default {
 
 
 #container {
-    background-color: rgb(93, 143, 201);
+    background-color: rgba(93, 143, 201,0.7);
+    background: url(../../assets/image/avatar.png);
     width: auto;
-    height: 700px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
 }
 
@@ -100,7 +96,7 @@ export default {
     background-color: rgba(93, 143, 201, 0.2);
     border-radius: 35px;
     padding: 0px 30px;
-     outline:none;
+    outline:none;
 
 }
 .submit-btn {
@@ -116,12 +112,6 @@ export default {
     text-decoration: none;
     text-align: center;
     line-height: 40px;
-
-
-
-    
-    
-
 }
 
 .submit-btn:hover {
