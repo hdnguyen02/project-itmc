@@ -1,7 +1,8 @@
 <template>
     <div id="container">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <form class="form-group"> 
+        <form class="form-group">
+            
             <h3 class="title">WELLCOME</h3>
             <input   class="input-login" type="text" placeholder="Enter email">
             <span class="errorMess"></span>
@@ -21,17 +22,7 @@
 <script>
 export default {
 
-    data () {
-        return {
-            
-        }
-    },
-    methods:{
-        
-    
- 
-    }
-    
+
 }
 </script>
 
@@ -65,10 +56,7 @@ export default {
     align-items: center;
 }
 
-.form-group .title {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .avatar {
     position:absolute;
@@ -76,6 +64,7 @@ export default {
     height: 80px;
     top: -50px;
     left: 210px;
+    background-color: rebeccapurple;
 
 }
 
