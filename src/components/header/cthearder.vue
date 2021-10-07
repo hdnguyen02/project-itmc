@@ -10,14 +10,14 @@
         </div>
         <ul v-show="onmenu" class="hdrop">
             <li id="chdrop" @mouseover="aHome='block'"  @mouseleave="aHome = 'none'"><a href="">Home</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aHome}">
+                <ul id="chlist" v-bind:style="{display: aHome}">
                     <li><a href="">Homepage Education</a></li>
                     <li><a href="">Homepage Courses</a></li>
                     <li><a href="">Homepage Events</a></li>
                 </ul>
             </li>
             <li id="chdrop" @mouseover="aCourses='block'"  @mouseleave="aCourses = 'none'"><a href="">Courses</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aCourses}">
+                <ul id="chlist" v-bind:style="{display: aCourses}">
                     <li><a href="">Course Landing Page</a></li>
                     <li><a href="">Course Listing</a></li>
                     <li><a href="">Course Listing with Images</a></li>
@@ -27,7 +27,7 @@
                 </ul>
             </li>
             <li id="chdrop" @mouseover="aEvents='block'"  @mouseleave="aEvents = 'none'"><a href="">Events</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aEvents}">
+                <ul id="chlist" v-bind:style="{display: aEvents}">
                     <li><a href="">Events Listing with images</a></li>
                     <li><a href="">Events Listing</a></li>
                     <li><a href="">Events Grid</a></li>
@@ -39,13 +39,13 @@
                 <a href="about-us.html">About Us</a>
             </li>
             <li id="chdrop" @mouseover="aBlog='block'"  @mouseleave="aBlog = 'none'"><a href="">Blog</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aBlog}">
+                <ul id="chlist" v-bind:style="{display: aBlog}">
                     <li><a href="">Blog listing</a></li>
                     <li><a href="">Blog Detail</a></li>
                 </ul>
             </li>
             <li id="chdrop" @mouseover="apages='block'"  @mouseleave="apages = 'none'"><a href="">Pages</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: apages}">
+                <ul id="chlist" v-bind:style="{display: apages}">
                     <li><a href="">Fullwidth</a></li>
                     <li><a href="">Left Sidebar</a></li>
                     <li><a href="">Right Sidebar</a></li>
@@ -67,14 +67,14 @@
         <!-- màn hình md trở lên -->
         <ul class="hdrop1">
             <li id="chdrop" @mouseover="aHome='block'"  @mouseleave="aHome = 'none'"><a href="">Home</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aHome}">
+                <ul id="chlist" v-bind:style="{display: aHome}">
                     <li><a href="">Homepage Education</a></li>
                     <li><a href="">Homepage Courses</a></li>
                     <li><a href="">Homepage Events</a></li>
                 </ul>
             </li>
             <li id="chdrop" @mouseover="aCourses='block'"  @mouseleave="aCourses = 'none'"><a href="">Courses</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aCourses}">
+                <ul id="chlist" v-bind:style="{display: aCourses}">
                     <li><a href="">Course Landing Page</a></li>
                     <li><a href="">Course Listing</a></li>
                     <li><a href="">Course Listing with Images</a></li>
@@ -84,7 +84,7 @@
                 </ul>
             </li>
             <li id="chdrop" @mouseover="aEvents='block'"  @mouseleave="aEvents = 'none'"><a href="">Events</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aEvents}">
+                <ul id="chlist" v-bind:style="{display: aEvents}">
                     <li><a href="">Events Listing with images</a></li>
                     <li><a href="">Events Listing</a></li>
                     <li><a href="">Events Grid</a></li>
@@ -96,13 +96,13 @@
                 <a href="">About Us</a>
             </li>
             <li id="chdrop" @mouseover="aBlog='block'"  @mouseleave="aBlog = 'none'"><a href="">Blog</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: aBlog}">
+                <ul id="chlist" v-bind:style="{display: aBlog}">
                     <li><a href="">Blog listing</a></li>
                     <li><a href="">Blog Detail</a></li>
                 </ul>
             </li>
             <li id="chdrop" @mouseover="apages='block'"  @mouseleave="apages = 'none'"><a href="">Pages</a>
-                <ul id="chlist" v-bind:style="{height: auto,display: apages}">
+                <ul id="chlist" v-bind:style="{display: apages}">
                     <li><a href="">Fullwidth</a></li>
                     <li><a href="">Left Sidebar</a></li>
                     <li><a href="">Right Sidebar</a></li>
