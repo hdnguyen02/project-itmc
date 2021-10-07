@@ -1,6 +1,6 @@
 <template>
-  <div id="student" >
-      thông tin sinh viên số 1
+  <div>
+      thông tin sinh viên
   </div>
 </template>
 
@@ -11,10 +11,5 @@ export default {
 </script>
 
 <style>
-#student {
-  width: 400px;
-  height: 700px;
-  background-color: aqua;
 
-}
 </style>
