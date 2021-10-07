@@ -2,7 +2,7 @@
   <div class="ctfooter">
       <div class="container">
           <div class="row">
-              <div class="logo col-12 col-md-3"><logo /></div>
+              <!-- <div class="logo col-12 col-md-3"><logo /></div> -->
               <div class="col-12 col-md-3"><contact /></div>
               <div class="col-12 col-md-3"><important /></div>
               <div class="col-12 col-md-3"><about /></div>
@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import logo from './ctfooter/logo.vue';
+// import logo from './ctfooter/Logo.vue';
 import contact from './ctfooter/contact.vue';
 import important from './ctfooter/important.vue';
 import about from './ctfooter/about.vue';
 export default {
     components: {
-        logo,
+        // logo,
         contact,
         important,
         about
