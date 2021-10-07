@@ -1,5 +1,7 @@
 <template>
-  
+    <div>
+        danh sách sinh viên
+    </div>
 </template>
 
 <script>

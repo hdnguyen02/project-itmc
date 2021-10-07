@@ -1,5 +1,5 @@
 <template>
-    <div id="container">
+    <div id="login">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <form class="form-group">
             
@@ -33,9 +33,10 @@ export default {
 }
 
 
-#container {
-    width: auto;
-    height: 800px;
+#login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
