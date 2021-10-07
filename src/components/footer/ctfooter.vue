@@ -12,13 +12,13 @@
 </template>
 
 <script>
-// import logo from './ctfooter/Logo.vue';
+import logo from './ctfooter/Login1.vue';
 import contact from './ctfooter/contact.vue';
 import important from './ctfooter/important.vue';
 import about from './ctfooter/about.vue';
 export default {
     components: {
-        // logo,
+         logo,
         contact,
         important,
         about
