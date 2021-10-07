@@ -4,7 +4,6 @@
         <ctheader />
         <logo />
         <homepage />
-        <test />
     </div>
 
 </template>
@@ -12,7 +11,7 @@
 <script>
 
 import ctheader from './cthearder.vue';
-import logo from './logo.vue';
+import logo from './Logo.vue';
 import homepage from './homepage.vue';
 import Search from './Search.vue';
 
