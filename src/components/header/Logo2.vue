@@ -22,6 +22,7 @@ export default {
         background-image: url(http://www.themestarz.net/html/universo/assets/img/logo.png);
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
     }
     
 }
@@ -40,6 +41,7 @@ export default {
         background-image: url(http://www.themestarz.net/html/universo/assets/img/logo.png);
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: center;
     }
     
     
