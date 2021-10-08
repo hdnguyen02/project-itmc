@@ -50,6 +50,7 @@ export default {
     }
     .follow {
         line-height: 40px;
+        padding-right: 0px;
     }
     .follow h6 {
         display: inline-block;
