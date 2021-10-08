@@ -10,8 +10,8 @@
           </div>
           <div class="aside">
             <div class="date">
-              <awesome :icon="['fas', 'file-alt']" class="i" />
-              <p>01-18-2014</p>
+              <span><awesome :icon="['fas', 'file-alt']" class="i" /></span>
+              <p>01-18-2021</p>
             </div>
             <a href="#"
               >Conservatory Exhibit: The garden of india a country and culture
@@ -27,8 +27,8 @@
           </div>
           <div class="aside">
             <div class="date">
-              <awesome :icon="['fas', 'file-alt']" class="i" />
-              <p>02-01-2014</p>
+              <span><awesome :icon="['fas', 'file-alt']" class="i" /></span>
+              <p>02-01-2021</p>
             </div>
             <a href="#"
               >February Half-Term Activities: Big Stars and Little Secrets</a
@@ -43,8 +43,8 @@
           </div>
           <div class="aside">
             <div class="date">
-              <awesome :icon="['fas', 'file-alt']" class="i" />
-              <p>03-23-2014</p>
+              <span><awesome :icon="['fas', 'file-alt']" class="i" /></span>
+              <p>03-23-2021</p>
             </div>
             <a href="#"
               >The Orchestra of the Age of Enlightenment perform with Music</a
@@ -86,7 +86,9 @@ h2::after {
   list-style: none;
   margin-bottom: 45px;
 }
-
+.date p {
+  padding-left: 10px;
+}
 .events-small .events-item .date-box {
   height: 70px;
   width: 70px;

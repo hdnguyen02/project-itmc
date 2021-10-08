@@ -6,7 +6,7 @@
         <li class="news-item">
           <div class="date row">
             <span><awesome :icon="['fas', 'file-alt']" class="i"/></span>
-            <p>08-24-2014</p>
+            <p>08-24-2021</p>
           </div>
           <a href="#"
             >U-M School of Public Health, Detroit partners aim to improve air
@@ -16,7 +16,7 @@
         <li class="news-item">
           <div class="date row">
             <span><awesome :icon="['fas', 'file-alt']" class="i" /></span>
-            <p>08-24-2014</p>
+            <p>08-24-2021</p>
           </div>
           <a href="#"
             >At 50, Center for the Education of Women celebrates a wider
@@ -26,7 +26,7 @@
         <li class="news-item">
           <div class="date row">
             <span><awesome :icon="['fas', 'file-alt']" class="i"/></span>
-            <p>08-24-2014</p>
+            <p>08-24-2021</p>
           </div>
           <a href="#">Three U-Michigan scientists receive Sloan fellowships</a>
         </li>
