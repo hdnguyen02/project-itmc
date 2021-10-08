@@ -121,9 +121,11 @@ h2::after {
 
 /* gallery */
 .gallery .gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .more::after {
     text-shadow: none;
@@ -183,8 +185,8 @@ h2::after {
 }
 
 .gallery .gallery-item a img {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 /* end gallery */
