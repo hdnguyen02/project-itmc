@@ -3,7 +3,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <form class="form-group">
             <h3 class="title">WELLCOME</h3>
-<<<<<<< Updated upstream
            
             <input @input="xoa" ref="email" @blur="email()" v-model="user.email" class="input-login " type="text" placeholder="Enter email">
            
@@ -12,13 +11,6 @@
             <a @click.prevent="login"  class="submit-btn">login</a>
             <span class="errorMess"></span>
             </div>
-=======
-            <input   class="input-login" type="text" placeholder="Enter email" name="username">
-            <span class="errorMess"></span>
-            <input class="input-login" type="password" placeholder="Enter password" name="password">
-            <span class="errorMess"></span>
-            <router-link :to="{name: 'Manage'}" class="submit-btn">login</router-link>
->>>>>>> Stashed changes
             <div class="login-diff">
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-google"></a>
