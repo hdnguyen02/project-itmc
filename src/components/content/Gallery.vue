@@ -143,6 +143,9 @@ h2::after {
     position: relative;
     top: 2px;
 }
+.i {
+  color: white;
+}
 .gallery .gallery-item {
   list-style: none;
   margin: 0 4px 5px 0;
@@ -156,6 +159,7 @@ h2::after {
 
 .gallery .gallery-item:hover a .i {
   display: block;
+  color: white;
 }
 
 .gallery .gallery-item:hover a img {
@@ -163,13 +167,19 @@ h2::after {
 }
 
 .gallery .gallery-item a .i {
-  font-size: 25px;
-  color: #000;
-  position: absolute;
-  top: calc((100% - 25px) / 2);
-  left: calc((100% - 28px) / 2);
-  z-index: 1;
-  display: none;
+    padding: 5px;
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    top: calc((100% - 25px) / 2);
+    left: calc((100% - 28px) / 2);
+    z-index: 1;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30px;
+    height: 30px;
 }
 
 .gallery .gallery-item a img {
