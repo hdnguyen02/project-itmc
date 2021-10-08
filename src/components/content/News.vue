@@ -4,8 +4,8 @@
       <h2>News</h2>
       <ul class="news-list">
         <li class="news-item">
-          <div class="date">
-            <awesome :icon="['fas', 'file-alt']" class="i"/>
+          <div class="date row">
+            <span><awesome :icon="['fas', 'file-alt']" class="i"/></span>
             <p>08-24-2014</p>
           </div>
           <a href="#"
@@ -14,8 +14,8 @@
           >
         </li>
         <li class="news-item">
-          <div class="date">
-            <awesome :icon="['fas', 'file-alt']" class="i" />
+          <div class="date row">
+            <span><awesome :icon="['fas', 'file-alt']" class="i" /></span>
             <p>08-24-2014</p>
           </div>
           <a href="#"
@@ -24,8 +24,8 @@
           >
         </li>
         <li class="news-item">
-          <div class="date">
-            <awesome :icon="['fas', 'file-alt']" class="i"/>
+          <div class="date row">
+            <span><awesome :icon="['fas', 'file-alt']" class="i"/></span>
             <p>08-24-2014</p>
           </div>
           <a href="#">Three U-Michigan scientists receive Sloan fellowships</a>
@@ -33,7 +33,6 @@
       </ul>
       <a href="#" class="more">
         All News
-        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
       </a>
     </section>
   </div>
@@ -69,7 +68,24 @@ h2::after {
   margin-bottom: 15px;
   padding-bottom: 12px;
 }
-
+.more::after {
+  text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'fontawesome';
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    transition: 0.4s;
+    color: #ea6645;
+    content: "\f18e";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
 .news-small .news-item:nth-child(1),
 .news-small .news-item:nth-child(2) {
   border-bottom: 1px solid #e5e5e5;
@@ -87,6 +103,9 @@ h2::after {
   font-weight: 400;
   color: #024283;
   padding-left: 14px;
+}
+.date p {
+  padding-left: 10px;
 }
 
 /* end news-small */

@@ -11,7 +11,6 @@
       </p>
       <a href="#" class="more">
         Read More
-        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
       </a>
     </section>
   </div>
@@ -46,7 +45,24 @@ h2::after {
   width: 100%;
   margin-bottom: 15px;
 }
-
+.more::after {
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'fontawesome';
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    transition: 0.4s;
+    color: #ea6645;
+    content: "\f18e";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
 .about-small p {
   font-size: 12px;
   line-height: 20px;

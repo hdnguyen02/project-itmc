@@ -8,7 +8,7 @@
            
             <input ref="pasword"  v-model="user.password" class="input-login" type="password" placeholder="Enter password">
             <div>
-            <a @click.prevent="login"  class="submit-btn">login</a>
+            <router-link :to="{name:'Manage'}" @click.prevent="login"  class="submit-btn">login</router-link>
             <span class="errorMess"></span>
             </div>
             <div class="login-diff">

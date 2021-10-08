@@ -115,8 +115,8 @@ h2::after {
   font-size: 60px;
   font-weight: bold;
   position: relative;
-  right: -12px;
-  bottom: 15px;
+  right: 0px;
+  bottom: 30px;
 }
 
 .events-small .events-item .aside {

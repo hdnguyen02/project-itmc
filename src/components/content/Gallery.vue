@@ -90,7 +90,6 @@
       </ul>
       <a href="#" class="more">
         Go to Gallery
-        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
       </a>
     </section>
   </div>
@@ -126,7 +125,24 @@ h2::after {
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
-
+.more::after {
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'fontawesome';
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    transition: 0.4s;
+    color: #ea6645;
+    content: "\f18e";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
 .gallery .gallery-item {
   list-style: none;
   margin: 0 4px 5px 0;
