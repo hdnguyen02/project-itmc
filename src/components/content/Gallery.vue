@@ -1,0 +1,177 @@
+<template>
+  <div class="col-sm-12 col-md-8">
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <ul class="gallery-list">
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/1.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/2.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/3.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/4.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/5.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/6.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/7.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/8.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/9.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/10.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/11.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/12.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/13.jpg" alt="" />
+          </a>
+        </li>
+        <li class="gallery-item">
+          <a href="#">
+            <awesome :icon="['fas', 'eye']" class="i"/>
+            <img src="../../assets/img/gallery/14.jpg" alt="" />
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="more">
+        Go to Gallery
+        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
+      </a>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+h2 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #252525;
+  margin: 0 0 35px 0;
+  position: relative;
+}
+
+h2::after {
+  background-color: #c5c5c5;
+  content: "";
+  height: 2px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+}
+
+/* gallery */
+.gallery .gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.gallery .gallery-item {
+  list-style: none;
+  margin: 0 4px 5px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .gallery-item a {
+  display: block;
+}
+
+.gallery .gallery-item:hover a .i {
+  display: block;
+}
+
+.gallery .gallery-item:hover a img {
+  transform: scale(1.1);
+}
+
+.gallery .gallery-item a .i {
+  font-size: 25px;
+  color: #000;
+  position: absolute;
+  top: calc((100% - 25px) / 2);
+  left: calc((100% - 28px) / 2);
+  z-index: 1;
+  display: none;
+}
+
+.gallery .gallery-item a img {
+  height: 100px;
+  width: 100px;
+}
+
+/* end gallery */
+
+/* Responsive */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+@media (max-width: 767px) {
+  .gallery .gallery-list {
+    margin-bottom: 10px;
+  }
+}
+/* end Responsive */
+</style>
