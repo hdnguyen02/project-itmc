@@ -26,7 +26,6 @@
       </div>
       <a href="#" class="more">
         All Professors
-        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
       </a>
     </section>
   </div>
@@ -65,7 +64,24 @@ h2::after {
   border: 2px solid #f5f5f5;
   margin-bottom: 10px;
 }
-
+.more::after {
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'fontawesome';
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    transition: 0.4s;
+    color: #ea6645;
+    content: "\f18e";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
 .our-professors .professors:nth-child(3) {
   margin-bottom: 35px;
 }

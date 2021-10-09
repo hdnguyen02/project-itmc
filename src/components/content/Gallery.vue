@@ -90,7 +90,6 @@
       </ul>
       <a href="#" class="more">
         Go to Gallery
-        <awesome :icon="['fas', 'arrow-circle-right']" class="i"/>
       </a>
     </section>
   </div>
@@ -122,11 +121,33 @@ h2::after {
 
 /* gallery */
 .gallery .gallery-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
+.more::after {
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'fontawesome';
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    transition: 0.4s;
+    color: #ea6645;
+    content: "\f18e";
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+.i {
+  color: white;
+}
 .gallery .gallery-item {
   list-style: none;
   margin: 0 4px 5px 0;
@@ -140,6 +161,7 @@ h2::after {
 
 .gallery .gallery-item:hover a .i {
   display: block;
+  color: white;
 }
 
 .gallery .gallery-item:hover a img {
@@ -147,18 +169,24 @@ h2::after {
 }
 
 .gallery .gallery-item a .i {
-  font-size: 25px;
-  color: #000;
-  position: absolute;
-  top: calc((100% - 25px) / 2);
-  left: calc((100% - 28px) / 2);
-  z-index: 1;
-  display: none;
+    padding: 5px;
+    font-size: 15px;
+    color: #000;
+    position: absolute;
+    top: calc((100% - 25px) / 2);
+    left: calc((100% - 28px) / 2);
+    z-index: 1;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30px;
+    height: 30px;
 }
 
 .gallery .gallery-item a img {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 /* end gallery */
