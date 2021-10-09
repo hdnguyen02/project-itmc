@@ -1,6 +1,6 @@
 <template>
   <div class="logoft">
-      <img src="http://www.themestarz.net/html/universo/assets/img/logo-white.png" alt="">
+      <img src="http://www.themestarz.net/html/universo/assets/img/logo-white.png">
   </div>
 </template>
 

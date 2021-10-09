@@ -1,33 +1,32 @@
 <template>
-    <div id="manage" >
-      <div id="sibarcus" >
-          đây là thanh sibar
-      </div>
-      <div>
-        <router-view/>
-      </div>
-      <div>
-
+    <div class="container">
+      <div id="manage" class="row" >
+        <div id="sibarcus" class="col-3" >
+            <sibar />
+        </div>
+        <div class="view col-9">
+          <router-view/>
+        </div>
       </div>
     </div>
 </template>
 
 <script>
+import Sibar from '../components/manage/Sibar.vue'
 export default {
-
+    components: {
+      Sibar,
+    }
 }
 </script>
 
 <style>
 
-#manage {
-  display: flex;
-}
-
 #sibarcus {
-  width:400px;
-  height:1000px;
-  background-color:greenyellow;
+  background-color:rgba(45, 83, 198, 0.8);
+}
+.view {
+  background-color: red;
 }
 
 </style>

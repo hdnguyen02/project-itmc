@@ -11,7 +11,7 @@
 <script>
 
 import ctheader from './cthearder.vue';
-import logo from './Logo.vue';
+import logo from './Logo2.vue';
 import homepage from './homepage.vue';
 import Search from './Search.vue';
 
