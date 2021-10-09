@@ -4,9 +4,9 @@
     <h4><awesome icon="award" />   Trang tổng quan</h4>
     <ul><h6>Quản lý</h6>
       <li><a href="#"><span><awesome icon="sitemap" /></span><p>Phòng ban</p></a></li>
-      <li>
+      <li @click="show = !show">
         <a href="#"><span><awesome icon="user-friends" /></span><p>Nhân sự</p></a>
-        <ul>
+        <ul v-show="show">
           <li><a href="">Danh sách sinh viên</a></li>
           <li><a href="">Xếp hạng/Đánh giá</a></li>
         </ul>
@@ -21,7 +21,11 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      show: true,
+    }
+  }
 }
 </script>
 
@@ -38,16 +42,15 @@ export default {
   #sibar ul {
     padding: 0px;
   }
-  #sibar ul li {
+  #sibar > ul > li {
     list-style: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     line-height: 60px;
   }
-  #sibar ul li > ul {
-    display: none;
-  }
-  #sibar ul li:hover > ul {
-    display: block;
+  
+  
+  #sibar ul li > ul li {
+    list-style: none;
   }
   #sibar ul li a {
     text-decoration: none;
