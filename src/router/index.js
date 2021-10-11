@@ -17,7 +17,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',        // trang chủ
+    path: '/',        // trang chủ // lúc mới vào hiển thị home
     name: 'Home',
     component: Home
   },
@@ -32,22 +32,22 @@ const routes = [
     component: Manage,
     children: [
       {
-        path:'',
+        path:'', //. lúc mới vào 
         name:'Students',    // danh sách sinh viên
         component:Students
       },
       {
-        path:'/manage/student/:id',  // xem sinh viên 
+        path:'/manage/student/:id',  // xem sinh viên // truyền id cần xem vào. // sinh viên giả data ()
         name:'Student',
         component:Student
       },
       {
-        path:'/manage/edit/:id',   // chĩnh sữa sinh viên
+        path:'/manage/edit/:id',   // chĩnh sữa sinh viên // id 
         name:'Edit',
         component:Edit
       },
       {
-        path:'/manage/add',   // thêm sinh viên
+        path:'/manage/add',   // thêm sinh viên // truyền 
         name:'Add',
         component:Add
       }

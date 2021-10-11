@@ -2,7 +2,136 @@
     "ower":{
       "email":"hdnguyen7702@gmail.com",
       "password":"123456789"
-    }
+    },
+    "sudents":[
+      {
+        "maSV":"SV01",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV02",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "id":1,
+        "maSV":"SV03",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+
+        "maSV":"SV04",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV05",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV06",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV07",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV08",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV09",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV010",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      },
+      {
+        "maSV":"SV011",
+        "image":"image",
+        "fullName":"Hồ Đức Nguyên",
+        "geder":"nam",
+        "postion":"sinh viên",
+        "condistion":"còn học"
+      }
+    ],
+    "congig":[
+      {
+        "name":"Mã SV",
+        "type":"string"
+      },
+      {
+        "name":"Ảnh",
+        "type":"image"
+      },
+      {
+        "name":"Họ tên",
+        "type":"string"
+      }, {
+        "name":"Giới tính",
+        "type":"string"
+      },
+      {
+        "name":"Chức vụ",
+        "type":"string"
+      },
+      {
+        "name":"tình trạng",
+        "type":"string"
+      },
+      {
+        "name":"Xem",
+        "type":"button"
+      },
+      {
+        "name":"Sữa",
+        "type":"button"
+      },
+      {
+        "name":"Xóa",
+        "type":"button"
+      }
+    ]
 
 }
 
