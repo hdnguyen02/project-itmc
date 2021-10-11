@@ -10,7 +10,7 @@ export default {
         return {
             listStudents:[], // dùng để chứa sinh viên sau khi gọi fetch thành công
         }
-    }
+    },
     mounted () {
         // nó sẽ chạy ngay khi các node ( obecct html div gắn màn hình render)
         // gọi API ( gọi tới sở dữ liệu)
