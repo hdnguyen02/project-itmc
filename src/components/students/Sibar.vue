@@ -3,18 +3,18 @@
     <h1><img src="http://www.themestarz.net/html/universo/assets/img/logo.png" alt=""></h1>
     <h4><awesome icon="award" />   Trang tổng quan</h4>
     <ul><h6>Quản lý</h6>
-      <li><a href="#"><span><awesome icon="sitemap" /></span><p>Phòng ban</p></a></li>
+      <li><a ><span><awesome icon="sitemap" /></span><p>Phòng ban</p></a></li>
       <li @click="show = !show">
-        <a href="#"><span><awesome icon="user-friends" /></span><p>Nhân sự</p></a>
+        <a ><span><awesome icon="user-friends" /></span><p>Nhân sự</p></a>
         <ul v-show="show">
-          <li><a href="">Danh sách sinh viên</a></li>
-          <li><a href="">Xếp hạng/Đánh giá</a></li>
+          <li><a >Danh sách sinh viên</a></li>
+          <li><a >Xếp hạng/Đánh giá</a></li>
         </ul>
       </li>
-      <li><a href="#"><span><awesome icon="calendar-check" /></span><p>Chấm công</p></a></li>
-      <li><a href="#"><span><awesome icon="bell" /></span><p>Thông báo</p></a></li>
-      <li><a href="#"><span><awesome icon="graduation-cap" /></span><p>Đào tạo</p></a></li>
-      <li><a href="#"><span><awesome icon="handshake" /></span><p>Tuyển dụng</p></a></li>
+      <li><a ><span><awesome icon="calendar-check" /></span><p>Chấm công</p></a></li>
+      <li><a ><span><awesome icon="bell" /></span><p>Thông báo</p></a></li>
+      <li><a ><span><awesome icon="graduation-cap" /></span><p>Đào tạo</p></a></li>
+      <li><a ><span><awesome icon="handshake" /></span><p>Tuyển dụng</p></a></li>
     </ul>
   </div>
 </template>
@@ -55,7 +55,7 @@ export default {
   #sibar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
   }
   #sibar ul li a span {
     display: inline-block;
@@ -67,7 +67,7 @@ export default {
   }
   #sibar ul h6 {
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 600;
     color: white;
     opacity: 0.5;
   }

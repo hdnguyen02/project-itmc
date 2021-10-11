@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Sibar from '../components/manage/Sibar.vue'
+import Sibar from '../components/students/Sibar.vue'
 export default {
     components: {
       Sibar,
@@ -24,9 +24,6 @@ export default {
 
 #sibarcus {
   background-color:rgba(47, 86, 200, 1);
-}
-.view {
-
 }
 
 </style>

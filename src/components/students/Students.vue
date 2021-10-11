@@ -1,57 +1,15 @@
 <template>
     <div>
-        <!-- HeaderAdd ( chứa thanh thêm sinh viên ) -->
-        <div id="headerStd">
-            <div id="childlef" >
-                <div class="btndropdown" id="btn1" >Phòng ban
-                    <awesome :icon="['fas','caret-down']" />
-                    <ul class="dropdowns" >
-                        <li class="childrop" >
-                            Cộng tác sinh viên
-                        </li>
-                        <li class="childrop" >
-                            Giáo vụ
-                        </li>
-                        <li class="childrop" >
-                            Hiệu trưởng
-                        </li>
-                    </ul>
-                </div>
-                <div class="btndropdown" id="btn2" >Chức vụ
-                    <awesome :icon="['fas','caret-down']" />
-                    <ul  class="dropdowns">
-                        <li class="childrop" >
-                            Lớp trưởng
-                        </li>
-                        <li class="childrop" >
-                            sinh viên
-                        </li>
-                        <li class="childrop" >
-                            giáo viên
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <router-link :to="{name:'Add'}" id="addStd" >Thêm nhân viên</router-link>
-
-        </div>
-        <!-- Show and Search  -->
-        <div id="selections">
-            <div>
-                <span>Show</span>  
-            </div>
-            <div>
-                <span>Search</span>
-                <input type="text">
-            </div>
-        </div>
+        <header-add class="margin" />
+        <hr>
+        <search-students class="margin" />
+        <hr>
 
         <!-- table students -->
-        <div id="table" >
+        <div id="students" >
             <table>
                 <tr>
-                    <td class="titletd" v-for="(obj,index) in config" :key="index" >{{obj.name}}</td>   
+                    <td class="titleTable" v-for="(conf,index) in config" :key="index" >{{conf.name}}</td>   
                 </tr>
                 <tr id="std" v-for="(student,index) in listRender" :key="index" >
                     <td >
@@ -73,29 +31,41 @@
                         <span>{{student.condistion}}</span>
                     </td>
                     <td>
-                        <button>Xem</button>
+                        <router-link  class="btn-table backgroundBlue" :to="{name:'Student',params:{id:student.maSV}}" >Xem</router-link>
                     </td>
                      <td>
-                        <button>Sữa</button>
+                        <router-link class="btn-table  backgroundGreen" :to="{name:'Edit',params:{id:student.maSV}}"  >Sữa</router-link>
                     </td>
                      <td>
-                        <button>Xóa</button>
+                        <button class="btn-table backgroundRed" >Xóa</button>
                     </td>
                 </tr>
-
             </table>
         </div>
-        <div id="page">
-            <span class="next" >Previus</span>
-            <span @click="pageChange(index+1)" class="btnpage" v-for="(item,index) in new Array(this.page)" :key="index" >{{index+1}}</span>
-            <span class="next">Next</span>
-
+        <div id="paginations" class="margin" >
+            <p>Show in 1 to {{showStudents}} to {{students.length}}</p>
+            <div>
+                <span @click="step" class="stepBtn" >Previous</span>
+                <span @click="pageChange(index+1)" class="btnpage" v-for="(item,index) in new Array(this.page)" :key="index" >{{index+1}}</span>
+                <span @click="step" class="stepBtn">Next</span>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+
+import HeaderAdd from './HeaderAdd.vue';
+import SearchStudents from './SearchStudents.vue';
+
+
 export default {
+
+    components:{
+        HeaderAdd,
+        SearchStudents
+    },
+    
     data(){
         return {
             config:[],
@@ -103,7 +73,7 @@ export default {
             studentsJson:"http://localhost:3000/sudents",
             students:[],
             page:undefined, // số page sẽ hiển thị ( tùy theo showStudents )
-            showStudents :5,   // muốn hiển thị bao nhiêu sinh viên cùng lúc show
+            showStudents :8,   // muốn hiển thị bao nhiêu sinh viên cùng lúc show
             curentPage:1,   // vị trí hiện tại của page ta đang đứng
             listRender:[]   // Array dùng để render
             
@@ -135,6 +105,11 @@ export default {
         fetch(this.studentsJson)
                     .then (repos => repos.json())
                     .then (data =>this.students = data)
+        },
+        step () {
+            // func sử lý chức năng tiến lùi 
+            // khi người dùng nhấn vào nút tiến => cho page hiện tại tăng lên 
+            console.log("hello word");
         }
     }
 }
@@ -143,140 +118,73 @@ export default {
 
 <style scoped>
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-#headerStd {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}   
-
-#childlef div {
-    border: none;
-    border-radius: 4px;
-    color: white;
-    background-color: rgb(167, 167, 170);
-    width: 140px;
-    height: 35px;
-    text-align: center;
-    margin-right: 15px;
-    display: inline-block;
-    line-height: 35px;
-    position: relative;
-    cursor: pointer;
-    
-
+#students {
+    height: 520px;
 }
 
-#addStd {
-    background-color: green;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    width: 140px;
-    height: 35px;
-    text-align: center;
-    line-height: 35px;
-    text-decoration: none;
+#students table {
+    width: 99%;
+    border: rgba(167, 167, 170,0.05) 1px solid;
 }
 
-.dropdowns {
-    position: absolute;
-    background-color: rgb(167, 167, 170);
-    top: 35;
-    width: 140px;
-    color: white;
-    cursor: pointer;
-    display: none;
-    
-   
+#students table td {
+    border: rgba(167, 167, 170,0.1) 1px solid;
 }
 
-#childlef div:hover .dropdowns {
-    display: block;
-}
-
-.childrop {
-    list-style: none;
-    text-align: center;
-    border-bottom: 1px solid white;
-    border-radius: 4px;
-}
-
-.childrop:nth-child(1) {
-    border-top: 1px solid white;
-}
-
-
-.dropdowns .open {
-    display: block;
-}
-
-#selections {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-#selections div:nth-child(2) span {
-    margin-right: 10px;
-}
-
-#selections div:nth-child(2) input {
-    outline:none;
-}
-
-#table {
-    margin: 10px;
-}
-
-#table table {
-    width: 100%;
-    border: rgba(167, 167, 170,0.5) 1px solid;
-
-}
-
-#table table td {
-    border: rgba(167, 167, 170,0.5) 1px solid;
-}
-
-.titletd {
+.titleTable {
     height: 60px;
     text-align: center;
-
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: rgb(244, 245, 249);
 }
 
-.titletd:nth-child(4) {
-    width: 60px;
-}
 
-.titletd:nth-child(6) {
-    width: 60px;
 
-}
-
-.titletd:nth-child(7),.titletd:nth-child(8),.titletd:nth-child(9),.titletd:nth-child(1)  {
-    width: 70px;
-}
-
-#std:nth-child(even) {
+#std:nth-child(odd) {
     background-color: rgb(244, 245, 249);
 }
 
 #std td {
-    padding: 15px 0px;
+    padding: 12px 0px;
     text-align: center;
 }
 
-#page {
-    display: flex;
-    justify-content: end;
-    margin-right: 10px;
+/* style btn - table  */
+
+#students .btn-table {
+    width: 54px;
+    height: 32px;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    line-height: 32px;
+    text-align: center;
+
 }
+
+#paginations {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
 
 .btnpage {
     display: inline-block;
@@ -290,7 +198,7 @@ export default {
 
 }
 
-.next {
+.stepBtn {
     width: 70px;
     height: 30px;
     display: inline-block;
@@ -299,7 +207,27 @@ export default {
     border: rgba(167, 167, 170,0.5) 1px solid;
 }
 
+.backgroundBlue {
+    background-color: rgba(47, 86, 200,0.9);
+    color: white;
+}
 
+
+.backgroundGreen {
+    background-color: rgb(54, 185, 204);
+    color: white;
+}
+
+.backgroundRed {
+    background-color: rgb(231, 74, 59);
+    color: white;
+}
+
+.margin {
+    margin-left: 10px;
+    margin-right: 21px;
+    padding: 15px 0px;
+}
 
 </style>
 
