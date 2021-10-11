@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
       <div id="manage" class="row" >
         <div id="sibarcus" class="col-3" >
             <sibar />
@@ -23,10 +23,10 @@ export default {
 <style>
 
 #sibarcus {
-  background-color:rgba(45, 83, 198, 0.8);
+  background-color:rgba(47, 86, 200, 1);
 }
 .view {
-  background-color: red;
+
 }
 
 </style>
