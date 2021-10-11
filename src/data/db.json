@@ -1,9 +1,141 @@
 {
-    "ower":{
-      "email":"hdnguyen7702@gmail.com",
-      "password":"123456789"
+  "ower": {
+    "email": "hdnguyen7702@gmail.com",
+    "password": "123456789"
+  },
+  "sudents": [
+    {
+      "maSV": "N20DCCN007",
+      "image": "hình ãnh",
+      "fullName": "Lê Duy",
+      "gender": "Nam",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "leduy@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "id": 1
+    },
+    {
+      "maSV": "N20DCCN002",
+      "image": "hình ãnh",
+      "fullName": "Phạm Tùng",
+      "gender": "Nam",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Bình định",
+      "email": "phamtung@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "nghanhHoc": "Công nghệ thông tin",
+      "id": 2
+    },
+    {
+      "maSV": "N20DCCN047",
+      "image": "hình ãnh",
+      "fullName": "Hồ đức Nguyên",
+      "gender": "Nam",
+      "phone": "09439343434",
+      "date": "07/07/2002",
+      "adress": "Cát Hưng Phù Cát Bình Định",
+      "postion": "Sinh viên",
+      "nativePlace": "BĐ",
+      "email": "hdnguyen7702",
+      "condistion": "Còn học",
+      "score": "hdnguyen702",
+      "nghanhHoc": "Công nghệ thông tin ",
+      "id": 4
+    },
+    {
+      "maSV": "N20DCCN047",
+      "image": "hình ãnh",
+      "fullName": "Hồ đức Nguyên",
+      "gender": "Nam",
+      "phone": "09439343434",
+      "date": "07/07/2002",
+      "adress": "Cát Hưng Phù Cát Bình Định",
+      "postion": "Sinh viên",
+      "nativePlace": "BĐ",
+      "email": "hdnguyen7702",
+      "condistion": "Còn học",
+      "score": "hdnguyen702",
+      "nghanhHoc": "Công nghệ thông tin ",
+      "id": 5
+    },
+    {
+      "maSV": "N20DCCN047",
+      "image": "hình ãnh",
+      "fullName": "Hồ đức Nguyên",
+      "gender": "Nam",
+      "phone": "09439343434",
+      "date": "07/07/2002",
+      "adress": "Cát Hưng Phù Cát Bình Định",
+      "postion": "Sinh viên",
+      "nativePlace": "BĐ",
+      "email": "hdnguyen7702",
+      "condistion": "Còn học",
+      "score": "hdnguyen702",
+      "nghanhHoc": "Công nghệ thông tin ",
+      "id": 7
+    },
+    {
+      "maSV": "N20DCCN047",
+      "image": "hình ãnh",
+      "fullName": "Hồ đức Nguyên",
+      "gender": "Nam",
+      "phone": "09439343434",
+      "date": "07/07/2002",
+      "adress": "Cát Hưng Phù Cát Bình Định",
+      "postion": "Sinh viên",
+      "nativePlace": "BĐ",
+      "email": "hdnguyen7702",
+      "condistion": "Còn học",
+      "score": "hdnguyen702",
+      "nghanhHoc": "Công nghệ thông tin ",
+      "id": 11
     }
-
+  ],
+  "congig": [
+    {
+      "name": "Mã SV",
+      "type": "string"
+    },
+    {
+      "name": "Ảnh",
+      "type": "image"
+    },
+    {
+      "name": "Họ tên",
+      "type": "string"
+    },
+    {
+      "name": "Giới tính",
+      "type": "string"
+    },
+    {
+      "name": "Chức vụ",
+      "type": "string"
+    },
+    {
+      "name": "tình trạng",
+      "type": "string"
+    },
+    {
+      "name": "Xem",
+      "type": "button"
+    },
+    {
+      "name": "Sữa",
+      "type": "button"
+    },
+    {
+      "name": "Xóa",
+      "type": "button"
+    }
+  ]
 }
-
-

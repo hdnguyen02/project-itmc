@@ -12,12 +12,13 @@ import Students from '../components/students/Students.vue'
 import Student from '../components/students/Student.vue'
 import Edit from '../components/students/Edit.vue'
 import Add from '../components/students/Add.vue'
+import Notfound404 from '../views/Notfound404.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',        // trang chủ
+    path: '/',      
     name: 'Home',
     component: Home
   },
@@ -32,26 +33,31 @@ const routes = [
     component: Manage,
     children: [
       {
-        path:'',
+        path:'', //. lúc mới vào 
         name:'Students',    // danh sách sinh viên
         component:Students
       },
       {
-        path:'/manage/student/:id',  // xem sinh viên 
+        path:'/manage/student/:id',  // xem sinh viên // truyền id cần xem vào. // sinh viên giả data ()
         name:'Student',
         component:Student
       },
       {
-        path:'/manage/edit/:id',   // chĩnh sữa sinh viên
+        path:'/manage/edit/:id',   // chĩnh sữa sinh viên // id 
         name:'Edit',
         component:Edit
       },
       {
-        path:'/manage/add',   // thêm sinh viên
+        path:'/manage/add',   // thêm sinh viên // truyền 
         name:'Add',
         component:Add
       }
     ]
+  },
+  {
+    path:"/:catchAll(.*)",
+    name:"Notfound",
+    component:Notfound404
   }
 
 ]
