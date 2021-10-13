@@ -1,9 +1,6 @@
 {
-  "ower": {
-    "email": "hdnguyen7702@gmail.com",
-    "password": "123456789"
-  },
-  "sudents": [
+  
+  "students": [
     {
       "maSV": "N20DCCN007",
       "image": "hình ãnh",

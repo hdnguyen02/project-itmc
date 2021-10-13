@@ -13,6 +13,7 @@ import Student from '../components/students/Student.vue'
 import Edit from '../components/students/Edit.vue'
 import Add from '../components/students/Add.vue'
 import Notfound404 from '../views/Notfound404.vue'
+import store from '../store'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,14 @@ const routes = [
     path:'/manage',   // quản lý
     name:'Manage',
     component: Manage,
+    beforeEnter:(to,from,next) => {
+      if (store.state.ower == false) {
+        next("/login");
+      }
+      else{
+        next();
+      }
+    },
     children: [
       {
         path:'', //. lúc mới vào 

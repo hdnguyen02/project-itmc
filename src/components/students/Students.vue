@@ -117,7 +117,7 @@ export default {
             fetch (this.title)
                     .then (repos => repos.json())
                     .then (data => this.config = data);
-        fetch(this.studentsJson)
+            fetch(this.studentsJson)
                     .then (repos => repos.json())
                     .then (data =>this.students = data)
         },
@@ -130,7 +130,7 @@ export default {
             
         },
         deleteOke () {
-            var url = "http://localhost:3000/sudents/" + this.idDelete;
+            var url = "http://localhost:3000/students/" + this.idDelete;
             const options = {
                 method: 'DELETE', 
                 headers: {

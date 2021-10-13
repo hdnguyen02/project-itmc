@@ -4,10 +4,10 @@
             <h3>Welcome</h3>
             <span><img src="../assets/avatar-01.jpg" alt=""></span>
             <div id="contentinputtext" >
-            <input class="input" placeholder="Username" type="text">
+            <input v-model="manager.email" class="input" placeholder="Username" type="text">
             </div>
             <div>
-            <input id="contentinputpass" class="input" placeholder="Password" type="password">
+            <input v-model="manager.password" id="contentinputpass" class="input" placeholder="Password" type="password">
             </div>
             <a @click.prevent="login" class="btnLogin">Login</a>
             <ul>
@@ -23,11 +23,25 @@
 
 <script>
 export default {
+    data () {
+        return {
+            // biến gắn với user đăng nhập 
+            manager:{
+                email:"",
+                password:"", 
+            }
+        }
+    },
     methods:{
         login () {
-            // trước khi vào manage phải đăng nhập ở login
+            if (this.manager.email == "" && this.manager.password == "") {
+                this.$store.commit('setOwer',true);
+                this.$router.push({name:'Manage'});
+            }
+            else {
+                alert("Sai mật khẩu");
+            }
         }
-
     }
 }
 </script>
