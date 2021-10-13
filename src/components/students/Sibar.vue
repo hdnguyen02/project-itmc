@@ -55,7 +55,7 @@ export default {
   #sibar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
   }
   #sibar ul li a span {
     display: inline-block;

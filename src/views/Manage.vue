@@ -2,7 +2,7 @@
     <div>
       <div id="manage" class="row" >
         <div id="sibarcus" class="col-3" >
-            <sibar />
+            <sibar/>
         </div>
         <div class="view col-9">
           <router-view/>
@@ -10,17 +10,28 @@
       </div>
     </div>
 </template>
-
 <script>
 import Sibar from '../components/students/Sibar.vue'
 export default {
     components: {
       Sibar,
-    }
-}
+    },
+    data () {
+      return {
+      
+      }
+    },
+    
+  }
+
+   
 </script>
 
 <style>
+
+#manage {
+  margin: 0;
+}
 
 #sibarcus {
   background-color:rgba(47, 86, 200, 1);

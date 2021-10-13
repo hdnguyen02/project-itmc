@@ -32,15 +32,13 @@ export default {
 
 <style scoped >
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: content-box;
-}
 
 #selections {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
 }
 
 #selections div:nth-child(2) span {

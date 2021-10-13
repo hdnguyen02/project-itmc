@@ -12,12 +12,15 @@ import Students from '../components/students/Students.vue'
 import Student from '../components/students/Student.vue'
 import Edit from '../components/students/Edit.vue'
 import Add from '../components/students/Add.vue'
+import Notfound404 from '../views/Notfound404.vue'
+// import { PopoverPlugin } from 'bootstrap-vue'
+import store from '../store/index'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',        // trang chủ // lúc mới vào hiển thị home
+    path: '/',      
     name: 'Home',
     component: Home
   },
@@ -30,10 +33,19 @@ const routes = [
     path:'/manage',   // quản lý
     name:'Manage',
     component: Manage,
+    beforeEnter:(to,from,next) => {
+      if (store.state.ower == false) {
+
+        next("/login");
+      } else {
+        next();
+      }
+    },
+
     children: [
       {
-        path:'', //. lúc mới vào 
-        name:'Students',    // danh sách sinh viên
+        path:'', 
+        name:'Students',    
         component:Students
       },
       {
@@ -52,6 +64,11 @@ const routes = [
         component:Add
       }
     ]
+  },
+  {
+    path:"/:catchAll(.*)",
+    name:"Notfound",
+    component:Notfound404
   }
 
 ]
