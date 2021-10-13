@@ -13,7 +13,8 @@ import Student from '../components/students/Student.vue'
 import Edit from '../components/students/Edit.vue'
 import Add from '../components/students/Add.vue'
 import Notfound404 from '../views/Notfound404.vue'
-import store from '../store'
+// import { PopoverPlugin } from 'bootstrap-vue'
+import store from '../store/index'
 
 Vue.use(VueRouter)
 
@@ -34,16 +35,17 @@ const routes = [
     component: Manage,
     beforeEnter:(to,from,next) => {
       if (store.state.ower == false) {
+
         next("/login");
-      }
-      else{
+      } else {
         next();
       }
     },
+
     children: [
       {
-        path:'', //. lúc mới vào 
-        name:'Students',    // danh sách sinh viên
+        path:'', 
+        name:'Students',    
         component:Students
       },
       {

@@ -21,19 +21,17 @@ export default {
       
       }
     },
-     
+    
   }
-    
-  
 
-    
-    
-    
-
-    
+   
 </script>
 
 <style>
+
+#manage {
+  margin: 0;
+}
 
 #sibarcus {
   background-color:rgba(47, 86, 200, 1);
