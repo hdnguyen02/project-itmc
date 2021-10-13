@@ -62,6 +62,47 @@ h2::after {
   bottom: -15px;
 }
 
+.date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date p {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #c5c5c5;
+  margin: 0;
+}
+
+.date .i {
+    font-size: 10px;
+    color: #e5e5e5;
+    margin-right: -6px;
+    margin-bottom: 2px;
+}
+
+.more {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #252525;
+}
+
+.more:hover {
+  text-decoration: none;
+  color: #024283;
+}
+
+.more .i {
+  color: #ea6645;
+  position: relative;
+  bottom: -2px;
+}
+
 /* news-small */
 .news-small .news-item {
   list-style: none;

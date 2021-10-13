@@ -55,6 +55,26 @@ h2::after {
   bottom: -15px;
 }
 
+.more {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #252525;
+}
+
+.more:hover {
+  text-decoration: none;
+  color: #024283;
+}
+
+.more .i {
+  color: #ea6645;
+  position: relative;
+  bottom: -2px;
+}
+
 /* our-professors */
 .our-professors .professors {
   display: flex;

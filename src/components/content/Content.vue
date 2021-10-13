@@ -38,16 +38,16 @@
 </template>
 
 <script>
-import News from "./content/News.vue";
-import Events from "./content/Events.vue";
-import AboutUniverso from "./content/AboutUniverso.vue";
-import AcademicLife from "./content/AcademicLife.vue";
-import CampusLife from "./content/CampusLife.vue";
-import Newsletter from "./content/Newsletter.vue";
-import Professors from "./content/Professors.vue";
-import Gallery from "./content/Gallery.vue";
-import Partners from "./content/Partners.vue";
-import Donation from "./content/Donation.vue";
+import News from "./News.vue";
+import Events from "./Events.vue";
+import AboutUniverso from "./AboutUniverso.vue";
+import AcademicLife from "./AcademicLife.vue";
+import CampusLife from "./CampusLife.vue";
+import Newsletter from "./Newsletter.vue";
+import Professors from "./Professors.vue";
+import Gallery from "./Gallery.vue";
+import Partners from "./Partners.vue";
+import Donation from "./Donation.vue";
 
 export default {
   components: {
@@ -70,49 +70,4 @@ export default {
 #content {
   margin-top: 60px;
 }
-
-.block {
-  padding: 10px 0 40px 0;
-}
-
-.date {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.date p {
-  font-size: 12px;
-  line-height: 17px;
-  font-weight: 400;
-  color: #c5c5c5;
-  margin: 0;
-}
-
-.date .i {
-  font-size: 10px;
-  color: #e5e5e5;
-  margin-right: 5px;
-}
-
-.more {
-  display: block;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #252525;
-}
-
-.more:hover {
-  text-decoration: none;
-  color: #024283;
-}
-
-.more .i {
-  color: #ea6645;
-  position: relative;
-  bottom: -2px;
-}
-
 </style>
