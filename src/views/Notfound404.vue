@@ -1,27 +1,23 @@
 <template>
-    <div id="notfound" >
-      <div>
-        <router-link class="btn404" to="/" >back to home</router-link>
-        <a @click="previous" class="btn404" >Previous</a>
-      </div>
+  <div id="notfound">
+    <div>
+      <router-link class="btn404" to="/">back to home</router-link>
+      <a @click="previous" class="btn404">Previous</a>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-
-  methods:{
-    previous () {
-      this.$router.go(-1); 
-
-    }
-  }
-
-}
+  methods: {
+    previous() {
+      this.$router.go(-1);
+    },
+  },
+};
 </script>
 
 <style scoped >
-
 #notfound {
   width: 100%;
   min-height: 750px;
@@ -34,7 +30,6 @@ export default {
 }
 
 #notfound .btn404 {
- 
   border: none;
   background-color: green;
   color: white;
@@ -46,9 +41,8 @@ export default {
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
-  margin-top:500px;
+  margin-top: 500px;
 }
-
 
 #notfound .btn404:hover {
   opacity: 0.8;
@@ -59,7 +53,4 @@ export default {
   width: 300px;
   justify-content: space-between;
 }
-
-
-
 </style>

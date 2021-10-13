@@ -1,61 +1,52 @@
 <template>
-
-    <div id="selections">
-            <div>
-                <span>Show</span>
-                  <select  class="selectCustom" >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option selected value="8">8</option>
-                </select>
-                <span>Etries</span>
-
-            </div>
-            <div>
-                <span>Search: </span>
-                <input type="text">  
-            </div>
+    <div id="searchStudent">
+        <div>
+        <span>Show </span>
+        <b-select  value="8" id="selectShowStudents" >
+            <option value="8">8</option>
+        </b-select>
         </div>
-
+        <div class="search">
+        <input id="searchStd" placeholder="Tìm kiếm" type="text">
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-
+    data () {
+        return {
+       
+        }
+    }
 }
 </script>
 
 <style scoped >
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: content-box;
-}
-
-#selections {
+#searchStudent {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0px;
+    background-color: #F5F5F5;
+    align-items: center;
 }
 
-#selections div:nth-child(2) span {
-    margin-right: 10px;
-}
-
-#selections div:nth-child(2) input {
-    outline:none;
+#searchStd {
     border-radius: 4px;
-    border:  rgba(167, 167, 170,0.6) 1px solid;
+    border: 1px solid #DCDCDC;
 }
 
-.selectCustom {
-  margin-left: 10px;
-  margin-right: 10px;
+
+#selectShowStudents {
+    width: 60px;
+    height: 35px;
+}
+
+input::placeholder {
+  font-size: 14px;
+  font-weight: 900;
+  padding: 0px 10px;
 }
 
 </style>

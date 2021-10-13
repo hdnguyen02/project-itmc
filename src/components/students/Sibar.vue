@@ -34,8 +34,6 @@ export default {
     width: 100%;
   }
   #sibar h4 {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 10px 0px;
     color: white;
   }
@@ -44,7 +42,6 @@ export default {
   }
   #sibar > ul > li {
     list-style: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     line-height: 60px;
   }
   
@@ -67,7 +64,7 @@ export default {
   }
   #sibar ul h6 {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
     opacity: 0.5;
   }

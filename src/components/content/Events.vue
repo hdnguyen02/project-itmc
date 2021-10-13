@@ -81,6 +81,27 @@ h2::after {
   bottom: -15px;
 }
 
+.date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date p {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #c5c5c5;
+  margin: 0;
+}
+
+.date .i {
+    font-size: 10px;
+    color: #e5e5e5;
+    margin-right: -6px;
+    margin-bottom: 2px;
+}
+
 /* events-small */
 .events-small .events-item {
   list-style: none;
