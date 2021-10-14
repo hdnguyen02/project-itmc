@@ -13,7 +13,6 @@ import Student from '../components/students/Student.vue'
 import Edit from '../components/students/Edit.vue'
 import Add from '../components/students/Add.vue'
 import Notfound404 from '../views/Notfound404.vue'
-// import { PopoverPlugin } from 'bootstrap-vue'
 import store from '../store/index'
 
 Vue.use(VueRouter)
@@ -25,12 +24,12 @@ const routes = [
     component: Home
   },
   {
-    path: '/login',   // đăng nhập
+    path: '/login',   
     name: 'Login',
     component: Login
   },
   {
-    path:'/manage',   // quản lý
+    path:'/manage',   
     name:'Manage',
     component: Manage,
     beforeEnter:(to,from,next) => {
@@ -49,17 +48,17 @@ const routes = [
         component:Students
       },
       {
-        path:'/manage/student/:id',  // xem sinh viên // truyền id cần xem vào. // sinh viên giả data ()
+        path:'/manage/student/:id', 
         name:'Student',
         component:Student
       },
       {
-        path:'/manage/edit/:id',   // chĩnh sữa sinh viên // id 
+        path:'/manage/edit/:id',   
         name:'Edit',
         component:Edit
       },
       {
-        path:'/manage/add',   // thêm sinh viên // truyền 
+        path:'/manage/add',   
         name:'Add',
         component:Add
       }

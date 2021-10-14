@@ -2,7 +2,7 @@
   <div class="col-sm-12 col-md-12 col-lg-4">
     <section class="about-small">
       <h2>About Universo</h2>
-      <!-- <img src="../assets/loginbackgroup.jpg" alt=""> -->
+      <img src="../../assets/img/students.jpg" alt="" />
       <p>
         <span>Welcome o Universo.</span> Premium HTML Template for schools,
         universieties and other educational institutes. Lorem ipsum dolor sit
@@ -38,6 +38,26 @@ h2::after {
   position: absolute;
   left: 0;
   bottom: -15px;
+}
+
+.more {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #252525;
+}
+
+.more:hover {
+  text-decoration: none;
+  color: #024283;
+}
+
+.more .i {
+  color: #ea6645;
+  position: relative;
+  bottom: -2px;
 }
 
 /* about-small */

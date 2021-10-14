@@ -41,7 +41,7 @@
           <td>
             <router-link
               class="btn-table backgroundGreen"
-              :to="{ name: 'Edit', params: { id: student.maSV } }"
+              :to="{ name: 'Edit', params: { id: student.id } }"
               >Sữa</router-link
             >
           </td>
