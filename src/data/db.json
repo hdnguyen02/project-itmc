@@ -65,6 +65,38 @@
       "id": 4
     },
     {
+      "maSV": "N20DCCN005",
+      "image": "hình ãnh",
+      "fullName": "lê Thu Thùy",
+      "gender": "Nữ",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "nhanDuc@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 5
+    },
+    {
+      "maSV": "N20DCCN006",
+      "image": "hình ãnh",
+      "fullName": "Hoàn lê kiều hoa",
+      "gender": "Nữ",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "nhanDuc@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 6
+    },
+    {
       "maSV": "N20DCCN007",
       "image": "hình ãnh",
       "fullName": "Nguyễn Văn Nhật",
@@ -111,6 +143,22 @@
       "score": "8.0",
       "nghanhHoc": "công nghệ thông tin",
       "id": 9
+    },
+    {
+      "maSV": "N20DCCN010",
+      "image": "hình ãnh",
+      "fullName": "Phan Thị Thúy",
+      "gender": "Nữ",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "vanloi@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 10
     },
     {
       "maSV": "N20DCCN011",
@@ -319,38 +367,44 @@
       "score": "8.0",
       "nghanhHoc": "công nghệ thông tin",
       "id": 23
+    }
+  ],
+  "congig": [
+    {
+      "name": "Mã SV",
+      "type": "string"
     },
     {
-      "maSV": "",
-      "image": "hình ãnh",
-      "fullName": "",
-      "gender": "",
-      "phone": "",
-      "date": "",
-      "adress": "",
-      "postion": "",
-      "nativePlace": "",
-      "email": "",
-      "condistion": "",
-      "score": "",
-      "nghanhHoc": "",
-      "id": 24
+      "name": "Ảnh",
+      "type": "image"
     },
     {
-      "maSV": "",
-      "image": "hình ãnh",
-      "fullName": "",
-      "gender": "",
-      "phone": "",
-      "date": "",
-      "adress": "",
-      "postion": "",
-      "nativePlace": "",
-      "email": "",
-      "condistion": "",
-      "score": "",
-      "nghanhHoc": "",
-      "id": 25
+      "name": "Họ tên",
+      "type": "string"
+    },
+    {
+      "name": "Giới tính",
+      "type": "string"
+    },
+    {
+      "name": "Chức vụ",
+      "type": "string"
+    },
+    {
+      "name": "tình trạng",
+      "type": "string"
+    },
+    {
+      "name": "Xem",
+      "type": "button"
+    },
+    {
+      "name": "Sữa",
+      "type": "button"
+    },
+    {
+      "name": "Xóa",
+      "type": "button"
     }
   ]
 }
