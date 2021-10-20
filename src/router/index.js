@@ -43,7 +43,8 @@ const routes = [
 
     children: [
       {
-        path:'/', 
+
+        path:'', 
         name:'Students',    
         component:Students
       },
