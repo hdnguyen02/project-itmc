@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid" id="edit">
-    <h3>Sữa thông tin sinh viên</h3>
+    <h3 class="title">Sữa thông tin sinh viên</h3>
     <!-- chức vụ nghành học -->
     <div class="row form-group">
       <div class="col-12 col-md-6">
@@ -81,21 +81,22 @@
     <div class="row form-group">
       <div class="col-12">
         <label for="score">Điểm số</label>
-        <input id="score" v-model="student.score" type="text" />
+        <input id="score" v-model="student.score" type="text"/>
       </div>
     </div>
 
     <!-- button  -->
     <div class="group-btn">
-      <button @click="previous" class="btn-edit background-red">Quay về</button>
-      <button @click="confirm" class="btn-edit">Lưu</button>
+      <button @click="previous" class="btn btn-secondary">Trở về</button>
+      <button @click="reset" class="btn btn-warning">Làm mới</button>
+      <button @click="confirm" class="btn btn-success">Lưu</button>
     </div>
 
     <!-- modal box  -->
     <div class="modal-edit">
       <div class="modal-content">
         <div class="header-modal">
-          <p>Thông tin chĩnh sữa</p>
+          <p>Thông tin chỉnh sữa</p>
         </div>
         <div class="body-modal">
           <span>Họ tên: {{ student.fullName }}</span>
@@ -119,8 +120,8 @@
           <span>Điểm số: {{ student.score }}</span>
         </div>
         <div class="footer">
-          <button @click="cancel">Hủy</button>
-          <button @click="editstudent">Oke</button>
+          <button @click="cancel" class="btn btn-secondary btn-sm radius-0px">Hủy</button>
+          <button @click="editstudent" class="btn btn-success btn-sm radius-0px">Oke</button>
         </div>
       </div>
     </div>
@@ -139,6 +140,9 @@ export default {
     };
   },
   methods: {
+    reset() {
+      this.student = {}
+    },
     confirm() {
       // xác nhận xem người dùng có muốn chĩnh sữa
       document.querySelector(".modal-edit").style.display = "flex";
@@ -184,11 +188,8 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#edit h3 {
-  padding: 16px 15px;
-  font-size: 28px;
-  opacity: 0.8;
-}
+
+
 
 .form-group {
   padding: 16px 0px;
@@ -229,6 +230,7 @@ export default {
 
 .group-btn {
   padding: 12px 15px;
+  padding-bottom: 28px;
 }
 
 .modal-edit {
@@ -250,7 +252,7 @@ export default {
   text-align: center;
   line-height: 56px;
   opacity: 0.8;
-  background-color: green;
+  background-color: #9370db;
   color: white;
 }
 
@@ -267,16 +269,11 @@ export default {
 
 .body-modal span {
   padding: 5px 25px;
-  /* border: 0.5px solid rgba(0, 0, 0, 0.2); */
 }
 
-.body-modal span:nth-child(even) {
-  background-color: #e6e6fa;
-}
 
-.body-modal span:nth-child(odd) {
-  background-color: #f5f5dc;
-}
+
+
 
 .footer {
   display: flex;
@@ -287,16 +284,13 @@ export default {
   height: 100%;
   padding: 16px 0px;
   border: none;
-  color: white;
+
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
-.footer button:nth-child(2) {
-  background-color: red;
+.group-btn button {
+  margin-right: 15px;
 }
 
-.footer button:nth-child(1) {
-  background-color: rgb(48, 48, 48);
-}
 </style>

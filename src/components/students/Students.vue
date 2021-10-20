@@ -1,107 +1,10 @@
 <template>
-
-    <!-- <header-add class="margin" />
-    <hr />
-    <search-students class="margin" />
-    <hr />
-
-    <div id="students">
-      <table>
-        <tr>
-          <td class="titleTable" v-for="(conf, index) in config" :key="index">
-            {{ conf.name }}
-          </td>
-        </tr>
-        <tr id="std" v-for="(student, index) in listRender" :key="index">
-          <td>
-            <span>{{ student.maSV }}</span>
-          </td>
-          <td>
-            <span>Hình ảnh</span>
-          </td>
-          <td>
-            <span>{{ student.fullName }}</span>
-          </td>
-          <td>
-            <span>{{ student.gender }}</span>
-          </td>
-          <td>
-            <span>{{ student.postion }}</span>
-          </td>
-          <td>
-            <span>{{ student.condistion }}</span>
-          </td>
-          <td>
-            <router-link
-              class="btn-table backgroundBlue"
-              :to="{ name: 'Student', params: { id: student.id } }"
-              >Xem</router-link
-            >
-          </td>
-          <td>
-            <router-link
-              class="btn-table backgroundGreen"
-              :to="{ name: 'Edit', params: { id: student.id } }"
-              >Sữa</router-link
-            >
-          </td>
-          <td>
-            <button
-              @click="modalDelete(student.id)"
-              class="btn-table backgroundRed"
-            >
-              Xóa
-            </button>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div id="paginations" class="margin">
-      <p>Show in 1 to {{ showStudents }} to {{ students.length }}</p>
-      <div>
-        <span @click="previousStep" class="stepBtn">Previous</span>
-        <span
-          :class="{ backgroundBlue: true }"
-          @click="pageChange(index + 1)"
-          class="btnpage"
-          v-for="(item, index) in new Array(this.page)"
-          :key="index"
-          >{{ index + 1 }}</span
-        >
-        <span @click="nextStep" class="stepBtn">Next</span>
-      </div>
-    </div>
-   
-    <div id="removeStd">
-      <div id="modalRes">
-        <p>Bạn có chắc chắc muốn xóa sinh viên này!</p>
-        <div>
-          <button
-            @click="deleteOke"
-            style="background-color: rgb(231, 74, 59)"
-            class="btn-delete"
-          >
-            Xóa
-          </button>
-          <button
-            @click="deleteCancel"
-            style="background-color: rgba(47, 86, 200, 0.9)"
-            class="btn-delete"
-          >
-            Hủy
-          </button>
-        </div>
-      </div>
-    </div> -->
-  
-
-    <div class="container-fluid" id="students" >
-
+    <div id="students" class="container-fluid">
       <div id="content" >
         <header-add  />
         <search-students/>
       <div  id="table">
-            <div class="row no-gutters title">  
+            <div class="row no-gutters">  
                 <div class="col-1 border">Mã số SV
                 <span style="margin-left:10px"><awesome icon="sort" /></span>
                 </div>
@@ -125,20 +28,20 @@
                 <div class="col-2 border-left border-right ">{{student.nghanhHoc}}</div>
                 <div class="col-1 border-left border-right ">
                   <!-- Xem chĩnh sữa xóa -->
-                  <router-link class="btn-custom btn-manage" style="background-color: rgba(47, 86, 200, 1)" :to="{ name: 'Student', params: { id: student.id } }" >Xem</router-link>
+                  <router-link class="btn btn-info min-width-60px" :to="{ name: 'Student', params: { id: student.id } }" >Xem</router-link>
                 </div>
                 <div class="col-1 border-left border-right ">
-                  <router-link class="btn-custom btn-manage" style="background-color: rgba(75,0,130,0.9)" :to="{ name: 'Edit', params: { id: student.id } }" >Sữa</router-link>
+                  <router-link class="btn btn-primary min-width-60px"  :to="{ name: 'Edit', params: { id: student.id } }" >Sữa</router-link>
                 </div>
                 <div class="col-1 border-left border-right ">
-                  <button @click="confirm(student.id)" class="btn-custom btn-manage" style="background-color: rgb(231, 74, 59)">Xóa</button>
+                  <button @click="confirm(student.id,student.fullName,student.maSV,students)" class="btn btn-danger min-width-60px">Xóa</button>
                 </div>
             </div> 
       </div>
-   
+                                
   <!-- pagination -->
   <div id="pagination">
-      <p>Show in 1 to {{ showStudents.doDai }} to {{ lengthArrStudents }}</p>
+      <p>Show in 1 to {{ showStudents }} to {{ lengthArrStudents }}</p>
       <div>
         <span @click="previousStep">
           <awesome icon="angle-double-left"/>
@@ -152,12 +55,11 @@
       </div>
     </div>
 
-    <!-- modal -->
+    <!-- modal delete-->
     <div class="modal-delete">
       <div class="content-delete">
          <div class="header-delete">
             <p>Bạn có muốn xóa sinh viên này!</p>
-
          </div>
          <div class="body-delete">
            <div>
@@ -170,8 +72,8 @@
            </div>
          </div>
          <div class="footer-delete">
-           <button class="cancelDelete">Hủy</button>
-           <button class="deleteOke">Oke</button>
+           <button class="btn btn-secondary cancelDelete radius-0px">Hủy</button>
+           <button class="btn btn-danger deleteOke radius-0px">Oke</button>
          </div>
       </div>
     </div>
@@ -188,7 +90,6 @@ export default {
   components: {
     HeaderAdd,
     SearchStudents,
-  
   },
   data() {
     return {
@@ -197,9 +98,7 @@ export default {
       studentsJson: "http://localhost:3000/students",
       students: [],
       page: undefined, 
-      showStudents: {
-        doDai:8
-      }, 
+      showStudents: 8, 
       curentPage: 1, 
       listRender: [],
       idDelete: undefined,
@@ -218,9 +117,9 @@ export default {
   },
   watch: {
     students() {
-      this.page = this.students.length / this.showStudents.doDai; // tính xem có bao nhiêu page.
-      this.listRender = this.students.slice(0, this.showStudents.doDai);
-      if (this.students.length % this.showStudents.doDai != 0) {
+      this.page = this.students.length / this.showStudents; // tính xem có bao nhiêu page.
+      this.listRender = this.students.slice(0, this.showStudents);
+      if (this.students.length % this.showStudents != 0) {
         this.page = Math.trunc(this.page) + 1;
       }
     },
@@ -228,46 +127,48 @@ export default {
       document.getElementById(oldVal).classList.remove('clickPage');
       document.getElementById(newVal).classList.add('clickPage');
       this.listRender = this.students.slice(
-        (newVal - 1) * this.showStudents.doDai,
-        (newVal - 1) * this.showStudents.doDai + this.showStudents.doDai
+        (newVal - 1) * this.showStudents,
+        (newVal - 1) * this.showStudents + this.showStudents
       );
     },
   },
   methods: {
-    async delete(url = '') {
-      const repos = await fetch(url, {
-          method:'DELETE',
-          headers: {'Content-Type': 'application/json'},
+    confirm(id,name,ms,arrStudent) {
+      document.querySelector('.modal-delete').style.display='flex';
+      document.querySelector('.cancelDelete').addEventListener ('click', function () {
+      document.querySelector('.modal-delete').style.display='none';         
         }
       )
-      return repos.json();
-      
-    },
-    confirm(id) {
-   
-      var x = 'http://localhost:3000/students/' + id;
-      fetch (x,{
+      document.querySelector('.name-delete').innerText=name;
+      document.querySelector('.maSV-delete').innerText=ms;
+      document.querySelector('.deleteOke').addEventListener('click',
+          function () {
+            var url = 'http://localhost:3000/students/' + id;
+      fetch (url,{
         method:'DELETE',
          headers: {'Content-Type': 'application/json'},
       }
       )
-      this.students.forEach (
+      arrStudent.forEach (
         function (student,index,arr) {
-          // so sanhs 
           if (student.id == id ) {
             arr.splice(index,1);
           }
         }
       )
+      document.querySelector('.modal-delete').style.display='none';
 
+          }
+        )
 
-
+   
+      
     },
-    pageChange(numberClick) {  // khi người dùng nhấn click ta sẽ reder lại cái mãng kia.
+    pageChange(numberClick) { 
       this.curentPage = numberClick;
       this.listRender = this.students.slice(
-        (numberClick - 1) * this.showStudents.doDai,
-        (numberClick - 1) * this.showStudents.doDai + this.showStudents.doDai
+        (numberClick - 1) * this.showStudents,
+        (numberClick - 1) * this.showStudents + this.showStudents
       );
    
     },
@@ -321,18 +222,14 @@ export default {
 }
 
 #students {
-  padding: 0;
+  padding: 15px;
   margin: 0;
   box-sizing: content-box;
   font-family: "Roboto", sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
-#students .title {
-  font-weight: 900;
-  opacity: 0.8;
-}
+
 
 
 .row-custom:nth-child(even) {
@@ -342,7 +239,7 @@ export default {
 .clickPage {
   background-color: rgba(47, 86, 200, 1);
   color: white;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 
@@ -378,15 +275,7 @@ export default {
   font-size: 16px;
 }
 
-.btn-manage {
-  font-size: 14px;
-  font-weight: 600;
-}
 
-.btn-click {
-  font-size: 12px;
-  font-weight: 800;
-}
 
 
 .modal-delete {
@@ -438,10 +327,10 @@ export default {
 }
 
 .body-delete > div {
-  padding: 16px;
+  padding: 0px 16px;
   font-size: 18px;
   opacity: 0.8;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 

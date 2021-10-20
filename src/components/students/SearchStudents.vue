@@ -45,7 +45,7 @@ export default {
 
 input::placeholder {
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 500;
   padding: 0px 10px;
 }
 

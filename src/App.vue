@@ -17,32 +17,38 @@ body {
     overflow-x: hidden;
 }
 
-.btn-custom {
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  display: flex;
-  font-size: 16px;
-  color: white;
-  font-weight: 400;
-  min-width: 65px;
-  max-width: 50px;
-  max-height: 30px;
-  min-height: 27px;
-  justify-content: center;
-  align-items: center;
+
+.min-width-60px {
+  min-width: 60px;
+  max-width: 180px;
 }
 
-.btn-custom:hover {
-  text-decoration: none;
+
+.title {
+  padding-left: 15px;
+  padding-top: 15px;
+  margin: 0;
+  opacity: 0.6;
+
+
+}
+
+
+input::placeholder {
+  font-size: 20px;
   opacity: 0.8;
-  color: white;
+  font-weight: 900;
 }
 
-.background-red {
-  background-color: rgb(231, 74, 59) !important;
-  color: white;
+
+
+
+.radius-0px {
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
+
+
 
 *:focus {
     outline: none;

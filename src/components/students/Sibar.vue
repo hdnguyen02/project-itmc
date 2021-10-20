@@ -30,6 +30,20 @@ export default {
 </script>
 
 <style scoped>
+
+  #sibar {
+    background-color:rgba(47, 86, 200, 1);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    max-width: 16.67%;
+    left: 0;
+    padding:30px 30px;
+    margin: 0;
+  }
+
+
   #sibar h1 img {
     width: 100%;
   }
@@ -68,4 +82,7 @@ export default {
     color: white;
     opacity: 0.5;
   }
+
+
+
 </style>

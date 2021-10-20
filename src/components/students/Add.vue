@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid" id="add">
-    <h3>Thêm sinh viên</h3>
+    <h3 class="title">Thêm sinh viên</h3>
     <!-- chức vụ ngành học -->
     <!-- bắc đầu coppy -->
 
@@ -141,11 +141,9 @@
     </div>
     <div class="row form-group">
       <div class="col-12" id="group-btn">
-        <button @click="previous" class="button-add background-red">Trở về</button>
-        <button @click="resetStudent" class="button-add">Làm mới</button>
-        <button id="btn-login" @click.prevent="checkStudent" class="button-add">
-          Thêm
-        </button>
+        <button @click="previous" class="btn btn-secondary">Trở về</button>
+        <button @click="resetStudent" class="btn btn-warning">Làm mới</button>
+        <button @click.prevent="checkStudent" class="btn btn-success" >Thêm</button>
       </div>
     </div>
     <div class="modal-error">
@@ -154,7 +152,7 @@
           <p>Nhập thiếu trường!</p>
         </div>
         <div>
-          <button @click="previousError" class="button-add">Xác nhận</button>
+          <button @click="previousError" class="btn btn-danger btn-sm">Xác nhận</button>
         </div>
       </div>
     </div>
@@ -165,8 +163,8 @@
           <p>Xác nhận thêm sinh viên</p>
         </div>
         <div class="btn-double">
-          <button @click="cancel" class="button-add background-red">Hủy</button>
-          <button @click="addStudent" class="button-add">Thêm sinh viên</button>
+          <button @click="cancel" class="btn btn-secondary btn-sm radius-0px">Hủy</button>
+          <button @click="addStudent" class="btn btn-success btn-sm radius-0px">Thêm sinh viên</button>
         </div>
       </div>
     </div>
@@ -287,20 +285,10 @@ export default {
 #add {
   margin: 0;
   box-sizing: content-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
 }
 
-#add h3 {
-  margin: 0;
-  padding-top: 10px;
-  padding-left: 15px;
-  font-size: 28px;
-  font-weight: 400;
-  opacity: 0.8;
-}
+
 
 .form-group {
   padding: 16px 0px;
@@ -357,29 +345,16 @@ input::placeholder {
   opacity: 0.8;
 }
 
-.button-add {
-  display: inline-block;
-  padding: 0px 4px;
-  border: none;
-  min-width: 90px;
-  height: 35px;
-  line-height: 35px;
-  margin-right: 16px;
-  border-radius: 4px;
-  background-color: green;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-}
+
 
 #group-btn {
   padding: 16px 15px;
 }
 
-#group-btn button:hover {
-  opacity: 0.7;
-  cursor: pointer;
+#group-btn > button {
+  margin-right: 16px;
 }
+
 
 #lable-avatar {
   display: inline-block;
@@ -424,19 +399,20 @@ input::placeholder {
   width: 100%;
   height: 50px;
   line-height: 50px;
+  font-size: 18px;
 }
 
-.content-box > div > button:hover {
-  opacity: 0.8;
-}
+
 .btn-double {
   display: flex;
 }
 
 .btn-double > button {
-  margin: 0;
-  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 /* xác nhận thêm sinh viên */
 #modal-confirm {

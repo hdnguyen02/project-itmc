@@ -4,8 +4,8 @@
 
 
     
-    <h5>Sinh viên: {{ student.fullName }}</h5>
-    <span>Mã sinh viên: {{ student.maSV }}</span>
+    <h3 class="title">Sinh viên: {{ student.fullName }}</h3>
+    <span class="title">Mã sinh viên: {{ student.maSV }}</span>
     <!-- Nghành học chức vụ -->
     <div class="row form-group">
         <div class="col-12 col-md-6">
@@ -73,8 +73,8 @@
         </div> 
     </div>
     <div class="btn-gr">
-      <button @click="nextEdit">Sữa thông tin</button>
-      <button @click="previous">trở về</button>
+      <button class="btn btn-secondary" @click="previous">trở về</button>
+      <button class="btn btn-primary" @click="nextEdit">Sữa thông tin</button>
     </div>
     </div>
   </div>
@@ -138,27 +138,8 @@ export default {
   padding: 16px 15px;
 }
 
-.btn-gr button {
-  display: inline-block;
-  color: white;
-  height: 35px;
-  width: 90px;
-  border: none;
-  line-height: 35px;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-.btn-gr button:hover {
-  opacity: 0.8;
-}
-
-.btn-gr button:nth-child(1) {
-  background-color: rgb(28, 200, 138);
-}
-
-.btn-gr button:nth-child(2) {
-  background-color: rgb(231, 74, 59);
+.btn-gr > button {
+  margin-right: 16px;
 }
 
 .form-group {

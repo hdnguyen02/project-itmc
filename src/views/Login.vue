@@ -20,7 +20,7 @@
           type="password"
         />
       </div>
-      <a @click.prevent="login" class="btnLogin">Login</a>
+      <a @click.prevent="login" class="btn btn-success btn-login">Login</a>
     </div>
   </div>
 </template>
@@ -112,29 +112,8 @@ export default {
   margin-bottom: 50px;
 }
 
-.btnLogin {
-  background-color: green;
-  display: inline-block;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  border-radius: 44px;
-  text-decoration: none;
-  cursor: pointer;
-}
 
-.btnLogin:hover {
-  opacity: 0.8;
-}
 
-input::placeholder {
-  font-size: 20px;
-  opacity: 0.8;
-  font-weight: 900;
-}
 
 
 

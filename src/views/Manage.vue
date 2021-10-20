@@ -1,55 +1,81 @@
 <template>
-      <div id="manage" class="row" >
-        <div id="sibarcus" class="col-2" >
-            <sibar/>
+      <div class="row" id="manage">
+        <div id="sibar-manage" class="col-2">
+          <sibar-manage/>
         </div>
-        <div class="col-10" id="view">
-          <router-view />
+        <div id="view-manage" class="col-10">
+          <header-manage id="header-manage"/>
+          <router-view id="view"/>
+          <footer-manage id="footer-manage"/>
         </div>
       </div>
 </template>
 <script>
-import Sibar from '../components/students/Sibar.vue'
+import SibarManage from '../components/students/Sibar.vue'
+import HeaderManage from '../components/students/HeaderManage.vue'
+import FooterManage from '../components/students/FooterManage.vue'
 export default {
     components: {
-      Sibar,
-    },
-    data () {
-      return {
-      
-      }
-    },
-    
+       SibarManage,HeaderManage,FooterManage
+    },   
   }
 
    
 </script>
 
-<style>
+<style scoped>
 
 #manage {
-  margin: 0;
-  padding: 0;
+  padding:0;
+  margin:0;
   box-sizing: content-box;
-  position: relative;
 }
-
-#sibarcus {
-  background-color:rgba(47, 86, 200, 1);
-  cursor: pointer;
+#header-manage {
+  
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
-#view {
-  position: absolute;
   right: 0;
-  z-index: -2;
-  padding: 15px 15px;
+  top: 0;
+  right:0;
+  width: 83.3%;
+  background-color: #ffff;
+  z-index: 1;
+  height: 65px;
+  display:flex;
+  justify-content: end;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding:0px 30px;
 }
+
+#view-manage {
+  padding:0;
+  margin:0;
+  box-sizing: content-box;
+  
+}
+
+#footer-manage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  right: 0;
+  height: 65px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: #ffff;
+  font-size: 14px;
+
+
+
+
+}
+
+ 
+ #view {
+   margin-top: 65px;
+ }
+
 
 
 </style>

@@ -22,7 +22,7 @@
         </ul>
     </div>
   </div>
-    <router-link :to="{name:'Add'}" class="btn-add" >Thêm sinh viên</router-link>
+    <router-link :to="{name:'Add'}" class="btn btn-success" >Thêm sinh viên</router-link>
     </div>
 </template>
 
@@ -77,7 +77,7 @@ export default {
 .btn-dropdown {
   width: 100%;
   color: white;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 16px;
   border: none;
   background-color: rgba(0, 0, 0, 0.6);
@@ -99,33 +99,14 @@ ul li {
   font-size: 18px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-
 }
 
 ul li:hover {
-  background-color:rgba(47, 86, 200, 0.8);
-}
-
-
-.btn-add {
-  border: none;
-  background-color: green;
+  background-color:#808080;
   color: white;
-  min-width: 150px;
-  height: 35px;
-  display: inline-block;
-  line-height: 35px;
-  text-align: center;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
 }
 
-.btn-add:hover {
-  opacity: 0.8;
-}
 
 
 </style>

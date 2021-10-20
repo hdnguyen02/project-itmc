@@ -351,22 +351,6 @@
       "score": "8.0",
       "nghanhHoc": "công nghệ thông tin",
       "id": 22
-    },
-    {
-      "maSV": "N20DCCN023",
-      "image": "hình ãnh",
-      "fullName": "Kiều thị Trinh",
-      "gender": "Nữ",
-      "phone": "0971408119",
-      "date": "07/07/2002",
-      "adress": "TP.HCM",
-      "postion": "Sinh viên",
-      "nativePlace": "Nam Định",
-      "email": "vanloi@gmail.com",
-      "condistion": "còn học",
-      "score": "8.0",
-      "nghanhHoc": "công nghệ thông tin",
-      "id": 23
     }
   ],
   "config": [
