@@ -2,7 +2,9 @@
     <div id="students" class="container-fluid">
       <div id="content" >
         <header-add  />
-        <search-students/>
+        
+
+        <search-students :showStudents="showStudents" :tangshow="tangshow" :giamshow="giamshow" />
       <div  id="table">
             <div class="row no-gutters">  
                 <div class="col-1 border">Mã số SV
@@ -41,7 +43,7 @@
                                 
   <!-- pagination -->
   <div id="pagination">
-      <p>Show in 1 to {{ showStudents }} to {{ lengthArrStudents }}</p>
+      <p>Show in 1 to {{ showStudents.length }} to {{ lengthArrStudents }}</p>
       <div>
         <span @click="previousStep">
           <awesome icon="angle-double-left"/>
@@ -98,7 +100,9 @@ export default {
       studentsJson: "http://localhost:3000/students",
       students: [],
       page: undefined, 
-      showStudents: 8, 
+      showStudents: {
+        length:8
+      }, 
       curentPage: 1, 
       listRender: [],
       idDelete: undefined,
@@ -113,26 +117,53 @@ export default {
   mounted() {
     this.loader();
       document.getElementById("1").classList.add('clickPage'); 
-
   },
   watch: {
+    showStudents:{
+      deep:true,
+      handler (newShow) {
+        this.curentPage = 1;
+        console.log(`${(parseInt(newShow.length, 10)+1)*50}px`);
+          const tableNode = document.getElementById('table');
+          tableNode.style.minHeight = `${(parseInt(newShow.length, 10)+1)*50}px`;
+            tableNode.style.maxHeight = `${(parseInt(newShow.length, 10)+1)*100}px`;
+            this.page = this.students.length /  newShow.length; 
+            this.listRender = this.students.slice(0,  newShow.length);
+            if (this.students.length % newShow.length != 0) {
+              this.page = Math.trunc(this.page) + 1;
+            }
+        
+     
+    }
+    } ,
     students() {
-      this.page = this.students.length / this.showStudents; // tính xem có bao nhiêu page.
-      this.listRender = this.students.slice(0, this.showStudents);
-      if (this.students.length % this.showStudents != 0) {
+      this.page = this.students.length / this.showStudents.length; 
+      this.listRender = this.students.slice(0, this.showStudents.length);
+      if (this.students.length % this.showStudents.length != 0) {
         this.page = Math.trunc(this.page) + 1;
       }
     },
-    curentPage(newVal,oldVal) { 
+    curentPage(newVal,oldVal) {  // góa trị vừa thay đổi song 
       document.getElementById(oldVal).classList.remove('clickPage');
       document.getElementById(newVal).classList.add('clickPage');
       this.listRender = this.students.slice(
-        (newVal - 1) * this.showStudents,
-        (newVal - 1) * this.showStudents + this.showStudents
+        (newVal - 1) * this.showStudents.length,
+        (newVal - 1) * this.showStudents.length + this.showStudents.length
       );
     },
   },
   methods: {
+    tangshow() {
+       if (this.showStudents.length != this.students.length ) {
+      this.showStudents.length++;
+      }
+    },
+    giamshow() {
+     
+      if (this.showStudents.length > 8) {
+        this.showStudents.length--;
+      }
+    },
     confirm(id,name,ms,arrStudent) {
       document.querySelector('.modal-delete').style.display='flex';
       document.querySelector('.cancelDelete').addEventListener ('click', function () {
@@ -157,20 +188,16 @@ export default {
         }
       )
       document.querySelector('.modal-delete').style.display='none';
-
           }
         )
-
-   
-      
+ 
     },
     pageChange(numberClick) { 
       this.curentPage = numberClick;
       this.listRender = this.students.slice(
-        (numberClick - 1) * this.showStudents,
-        (numberClick - 1) * this.showStudents + this.showStudents
+        (numberClick - 1) * this.showStudents.length,
+        (numberClick - 1) * this.showStudents.length + this.showStudents.length
       );
-   
     },
     loader() {
       fetch(this.title)
@@ -229,9 +256,6 @@ export default {
 }
 
 
-
-
-
 .row-custom:nth-child(even) {
   background-color: #E6E6FA;
 }
@@ -245,13 +269,13 @@ export default {
 
 
 #table {
-  min-height: 500px;
+  min-height: 470px;
   max-height: 1000px;
 }
 
 #table div div {
   min-height: 50px;
-  max-height: 70px;
+  max-height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,9 +333,8 @@ export default {
   color: white;
   background-color: green;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
-  
 }
 
 .footer-delete {

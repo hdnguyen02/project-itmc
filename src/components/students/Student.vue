@@ -128,11 +128,7 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#student h5 {
-  font-size: 28px;
-  opacity: 0.6;
-  font-weight: 900;
-}
+
 
 .btn-gr {
   padding: 16px 15px;

@@ -30,8 +30,8 @@
 export default {
   data () {
     return {
-      dropdown1:false,   // dropdown 1
-      dropdown2:false,   // dropdown 2
+      dropdown1:false,   
+      dropdown2:false,  
     }
   },
 

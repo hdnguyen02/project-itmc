@@ -35,9 +35,10 @@ body {
 
 
 input::placeholder {
-  font-size: 20px;
+  font-size: 16px;
   opacity: 0.8;
-  font-weight: 900;
+  font-weight: 500;
+  padding:0px 15px;
 }
 
 

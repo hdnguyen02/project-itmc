@@ -117,7 +117,7 @@
             <li>
                 <a href="">Contact Us</a>
             </li>
-            <router-link class="mhmd" :to="{name: 'Login'}">Login</router-link>
+            <router-link  class="mhmd btn btn-success" :to="{name: 'Login'}">Login</router-link>
         </ul>
         <!-- màn hình to end -->
 
@@ -271,16 +271,15 @@ export default {
     .hdrop1 > .mhmd {
         border: 0px;
         display: flex;
-        margin-top: 15px;
-        height: 50px;
+        height: 35px;
         align-items: center;
         justify-content: center;
-        line-height: 50px;
-        color: rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        background-image: url(../../assets/user.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+        margin-top: 22.5px;
+    
+     
+
+
+
         width: 50px;
         font-size: 15px;
     }

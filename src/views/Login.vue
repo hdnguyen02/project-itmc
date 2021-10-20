@@ -37,9 +37,7 @@ export default {
   },
   methods: {
     login() {
-      // khi người dùng nhấn đăng nhập
-      if (this.user.email == "" && this.user.password == "") {
-        // thực hiện
+      if (this.user.email == "admin" && this.user.password == "password") {
         this.$store.commit("setOwer", true);
         this.$router.push("/manage"); //
       } else {

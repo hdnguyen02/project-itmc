@@ -10,11 +10,12 @@
       "adress": "TP.HCM",
       "postion": "Sinh viên",
       "nativePlace": "Nam Định",
-      "email": "leduy@gmail.com",
-      "condistion": "còn học",
+      "email": "hdddnguen@gmail.com",
+      "condistion": "Đang học",
       "score": "8.0",
-      "nghanhHoc": "công nghệ thông tinCông nghệ thông tin",
-      "id": 1
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 1,
+      "position": "trợ giảng"
     },
     {
       "maSV": "N20DCCN002",
@@ -30,7 +31,8 @@
       "condistion": "còn học",
       "score": "8.0",
       "nghanhHoc": "công nghệ thông tin",
-      "id": 2
+      "id": 2,
+      "position": "Giảng viên"
     },
     {
       "maSV": "N20DCCN003",
@@ -241,7 +243,7 @@
       "id": 15
     },
     {
-      "maSV": "N20DCCN015",
+      "maSV": "N20DCCN016",
       "image": "hình ãnh",
       "fullName": "Hồ văn Du",
       "gender": "Nữ",
@@ -367,6 +369,22 @@
       "score": "8.0",
       "nghanhHoc": "công nghệ thông tin",
       "id": 23
+    },
+    {
+      "maSV": "N20DCCN024",
+      "image": "hình ãnh",
+      "fullName": "Kiều thị Trinh",
+      "gender": "Nữ",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "vanloi@gmail.com",
+      "condistion": "còn học",
+      "score": "8.0",
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 24
     }
   ],
   "config": [

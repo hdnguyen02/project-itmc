@@ -4,7 +4,7 @@
       <span>Hồ Đức Nguyên</span>
     </div>
     <div id="dropdown-user">
-      <button class="btn btn-info">
+      <button @click="logOut" class="btn btn-info">
         Đăng xuất
       </button>
       
@@ -15,7 +15,12 @@
 
 <script>
 export default {
-
+  methods:{
+    logOut () {
+      // đăng xuất đưa về trang chủ
+      this.$router.push("/");
+    }
+  }
 }
 </script>
 

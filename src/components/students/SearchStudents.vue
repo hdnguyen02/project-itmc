@@ -1,10 +1,10 @@
 <template>
     <div id="searchStudent">
-        <div>
-        <span>Show </span>
-        <b-select  value="8" id="selectShowStudents" >
-            <option value="8">8</option>
-        </b-select>
+        <div id="show">
+        <span>Show</span>
+        <span>{{showStudents.length}}</span>
+        <button class="btn btn-outline-danger btn-step" @click="giamshow">-</button>
+        <button class="btn btn-outline-success btn-step" @click="tangshow">+</button>
         </div>
         <div class="search">
         <input id="searchStd" placeholder="Tìm kiếm" type="text">
@@ -14,11 +14,8 @@
 
 <script>
 export default {
-    data () {
-        return {
-       
-        }
-    }
+    props:['showStudents','tangshow','giamshow'],
+   
 }
 </script>
 
@@ -43,10 +40,24 @@ export default {
     height: 35px;
 }
 
-input::placeholder {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0px 10px;
+.btn-step {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    padding: 0;
 }
+
+#show > span {
+    margin: 4px;
+    padding: 4px;
+}
+
+#show > button {
+    margin:4px;
+}
+
+
 
 </style>
