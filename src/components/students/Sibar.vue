@@ -30,12 +30,24 @@ export default {
 </script>
 
 <style scoped>
+
+  #sibar {
+    background-color:rgba(47, 86, 200, 1);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    max-width: 16.67%;
+    left: 0;
+    padding:30px 30px;
+    margin: 0;
+  }
+
+
   #sibar h1 img {
     width: 100%;
   }
   #sibar h4 {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 10px 0px;
     color: white;
   }
@@ -44,7 +56,6 @@ export default {
   }
   #sibar > ul > li {
     list-style: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     line-height: 60px;
   }
   
@@ -67,8 +78,11 @@ export default {
   }
   #sibar ul h6 {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     color: white;
     opacity: 0.5;
   }
+
+
+
 </style>

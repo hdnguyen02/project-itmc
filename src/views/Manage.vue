@@ -1,40 +1,68 @@
 <template>
-    <div>
-      <div id="manage" class="row" >
-        <div id="sibarcus" class="col-3" >
-            <sibar/>
+      <div class="row" id="manage">
+        <div id="sibar-manage" class="col-2">
+          <sibar-manage/>
         </div>
-        <div class="view col-9">
-          <router-view/>
+        <div id="view-manage" class="col-10">
+          <header-manage id="header-manage"/>
+          <router-view id="view"/>
+
         </div>
       </div>
-    </div>
 </template>
 <script>
-import Sibar from '../components/students/Sibar.vue'
+import SibarManage from '../components/students/Sibar.vue'
+import HeaderManage from '../components/students/HeaderManage.vue'
 export default {
     components: {
-      Sibar,
+       SibarManage,HeaderManage
     },
-    data () {
-      return {
-      
-      }
-    },
+   
+    
     
   }
 
    
 </script>
 
-<style>
+<style scoped>
 
 #manage {
-  margin: 0;
+  padding:0;
+  margin:0;
+  box-sizing: content-box;
+}
+#header-manage {
+  
+  position: fixed;
+  right: 0;
+  top: 0;
+  right:0;
+  width: 83.3%;
+  background-color: #ffff;
+  z-index: 1;
+  height: 65px;
+  display:flex;
+  justify-content: end;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding:0px 30px;
 }
 
-#sibarcus {
-  background-color:rgba(47, 86, 200, 1);
+#view-manage {
+  padding:0;
+  margin:0;
+  box-sizing: content-box;
+  
 }
+
+
+
+ 
+ #view {
+   margin-top: 65px;
+ }
+
+
 
 </style>

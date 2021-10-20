@@ -20,14 +20,7 @@
           type="password"
         />
       </div>
-      <a @click.prevent="login" class="btnLogin">Login</a>
-      <ul>
-        <li><a>Forgot Username / Password?</a></li>
-        <div>
-          <li><a>Don’t have an account? Sign up</a></li>
-          <router-link to="/" class="btn-home">Back to home</router-link>
-        </div>
-      </ul>
+      <a @click.prevent="login" class="btn btn-success btn-login">Login</a>
     </div>
   </div>
 </template>
@@ -44,9 +37,7 @@ export default {
   },
   methods: {
     login() {
-      // khi người dùng nhấn đăng nhập
-      if (this.user.email == "" && this.user.password == "") {
-        // thực hiện
+      if (this.user.email == "admin" && this.user.password == "password") {
         this.$store.commit("setOwer", true);
         this.$router.push("/manage"); //
       } else {
@@ -68,12 +59,19 @@ export default {
   margin: 0;
   box-sizing: content-box;
   font-family: "Roboto", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 500px;
+  max-height: 800px;
 }
 
 #form {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 50px;
   width: 400px;
   overflow: hidden;
 }
@@ -112,34 +110,10 @@ export default {
   margin-bottom: 50px;
 }
 
-.btnLogin {
-  background-color: rgb(87, 184, 70);
-  display: inline-block;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  border-radius: 44px;
-  text-decoration: none;
-  cursor: pointer;
-}
 
-input::placeholder {
-  font-size: 20px;
-  opacity: 0.8;
-  font-weight: 900;
-}
 
-#form ul {
-  padding-top: 90px;
-}
-#form ul li {
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-}
+
+
 
 #form ul li:nth-child(1) {
   padding-bottom: 15px;
@@ -161,9 +135,6 @@ input::placeholder {
   font-weight: 900;
 }
 
-ul div {
-  display: flex;
-  justify-content: space-between;
-}
+
 </style>
 

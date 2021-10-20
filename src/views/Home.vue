@@ -15,7 +15,6 @@ import headerCustom from "../components/header/Header.vue";
 import FooterCustom from "../components/footer/FooterCustom.vue";
 import contentCustom from "../components/content/Content.vue";
 
-
 export default {
   components: {
     headerCustom,

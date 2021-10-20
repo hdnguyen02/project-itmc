@@ -1,59 +1,63 @@
 <template>
-
-    <div id="selections">
-            <div>
-                <span>Show</span>
-                  <select  class="selectCustom" >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option selected value="8">8</option>
-                </select>
-                <span>Etries</span>
-
-            </div>
-            <div>
-                <span>Search: </span>
-                <input type="text">  
-            </div>
+    <div id="searchStudent">
+        <div id="show">
+        <span>Show</span>
+        <span>{{showStudents.length}}</span>
+        <button class="btn btn-outline-danger btn-step" @click="giamshow">-</button>
+        <button class="btn btn-outline-success btn-step" @click="tangshow">+</button>
         </div>
-
+        <div class="search">
+        <input id="searchStd" placeholder="Tìm kiếm" type="text">
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-
+    props:['showStudents','tangshow','giamshow'],
+   
 }
 </script>
 
 <style scoped >
 
-
-#selections {
+#searchStudent {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    box-sizing: content-box;
+    padding: 10px 0px;
+    background-color: #F5F5F5;
+    align-items: center;
 }
 
-#selections div:nth-child(2) span {
-    margin-right: 10px;
-}
-
-#selections div:nth-child(2) input {
-    outline:none;
+#searchStd {
     border-radius: 4px;
-    border:  rgba(167, 167, 170,0.6) 1px solid;
+    border: 1px solid #DCDCDC;
 }
 
-.selectCustom {
-  margin-left: 10px;
-  margin-right: 10px;
+
+#selectShowStudents {
+    width: 60px;
+    height: 35px;
 }
+
+.btn-step {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    padding: 0;
+}
+
+#show > span {
+    margin: 4px;
+    padding: 4px;
+}
+
+#show > button {
+    margin:4px;
+}
+
+
 
 </style>

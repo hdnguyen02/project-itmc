@@ -1,93 +1,112 @@
 <template>
-  <div id="headerStd">
-    <div id="childlef">
-      <div class="btndropdown" id="btn1">
-        Phòng ban
-        <awesome :icon="['fas', 'caret-down']" />
-        <ul class="dropdowns">
-          <li class="childrop">Cộng tác sinh viên</li>
-          <li class="childrop">Giáo vụ</li>
-          <li class="childrop">Hiệu trưởng</li>
+  <div id="headerAdd">
+    <div id="containerDropdown" >
+    <div class="dropdown">
+        <button @click="dropdown1=!dropdown1" class="btn-dropdown" >
+          <span style="margin-right:10px" >Phòng ban</span>
+          <span><awesome icon="caret-square-down" /></span></button>
+        <ul v-show="dropdown1">
+          <li>xã hội</li>
+          <li>Giáo vụ</li>
+          <li>Sinh viên</li>        
         </ul>
-      </div>
-      <div class="btndropdown" id="btn2">
-        Chức vụ
-        <awesome :icon="['fas', 'caret-down']" />
-        <ul class="dropdowns">
-          <li class="childrop">Lớp trưởng</li>
-          <li class="childrop">sinh viên</li>
-          <li class="childrop">giáo viên</li>
-        </ul>
-      </div>
     </div>
-
-    <router-link :to="{ name: 'Add' }" id="addStd">Thêm nhân viên</router-link>
+    <div class="dropdown">
+        <button @click="dropdown2=!dropdown2" class="btn-dropdown" >
+          <span style="margin-right:10px" >Chức vụ</span>
+          <span><awesome icon="caret-square-down" /></span></button>
+        <ul v-show="dropdown2">
+          <li>Giáo viên</li>
+          <li>Sinh viên</li>  
+          <li>Trợ giảng</li>     
+        </ul>
+    </div>
   </div>
+    <router-link :to="{name:'Add'}" class="btn btn-success" >Thêm sinh viên</router-link>
+    </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data () {
+    return {
+      dropdown1:false,   
+      dropdown2:false,  
+    }
+  },
+
+};
 </script>
 
 <style scoped >
 
-#headerStd {
-  display: flex;
+#headerAdd {
+ 
+  padding: 10px 0px;
+   display: flex;
   justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  box-sizing: content-box;
+  background-color: #F5FFFA;
+
+  
 }
 
-#childlef div {
+#containerDropdown {
+   display: flex;
+}
+
+.dropdown {
+  min-width: 150px;
+  max-width: 160px;
+ position: relative;
+ margin-right: 20px;;
+
+ 
+}
+
+.dropdown ul {
+
+ position: absolute;
+ bottom:-100;
+ background-color:white;
+ left: 0;
+ right: 0;
+ z-index: 2;
+}
+
+
+.btn-dropdown {
+  width: 100%;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
   border: none;
-  border-radius: 4px;
-  color: white;
-  background-color: rgb(167, 167, 170);
-  width: 140px;
-  height: 35px;
-  text-align: center;
-  margin-right: 15px;
-  display: inline-block;
-  line-height: 35px;
-  position: relative;
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 35px;
+  border-radius: 2px;
+
 }
 
-#addStd {
-  background-color: green;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  width: 140px;
-  height: 35px;
-  text-align: center;
-  line-height: 35px;
-  text-decoration: none;
+ul {
+  padding: 0px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.dropdowns {
-  position: absolute;
-  background-color: rgb(167, 167, 170);
-  top: 35;
-  width: 140px;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-#childlef div:hover .dropdowns {
-  display: block;
-}
-
-.childrop {
+ul li {
   list-style: none;
+  padding: 10px 5px;
   text-align: center;
-  border-bottom: 1px solid white;
-  border-radius: 4px;
+  color: black;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.childrop:nth-child(1) {
-  border-top: 1px solid white;
+ul li:hover {
+  background-color:#808080;
+  color: white;
+  font-size: 20px;
 }
+
+
+
 </style>
