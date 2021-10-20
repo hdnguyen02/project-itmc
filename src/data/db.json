@@ -1,6 +1,23 @@
 {
   "students": [
     {
+      "maSV": "N20DCCN001",
+      "image": "hình ãnh",
+      "fullName": "Hồ Đức Nguyên",
+      "gender": "Nam",
+      "phone": "0971408119",
+      "date": "07/07/2002",
+      "adress": "TP.HCM",
+      "postion": "Sinh viên",
+      "nativePlace": "Nam Định",
+      "email": "hdddnguen@gmail.com",
+      "condistion": "Đang học",
+      "score": "8.0",
+      "nghanhHoc": "công nghệ thông tin",
+      "id": 1,
+      "position": "trợ giảng"
+    },
+    {
       "maSV": "N20DCCN002",
       "image": "hình ãnh",
       "fullName": "Lê Duy",
